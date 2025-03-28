@@ -1,0 +1,70 @@
+{
+  "_barra_navegacion": "Esta es la información de la barra de navegación",
+  "nombre": "La Mía Constructora",
+  "contacto": {
+    "whatsapp": "+123.456.78910"
+  },
+  "primera_seccion": "NO CAMBIAR LAS RUTAS A LAS IMAGENES SIN CONSULTA PREVIA (se pueden cambiar las descripciones de los proyectos)",
+  "carousel": [
+    {
+      "title": "ALEJANDRÍA",
+      "image": "/alejandria.webp",
+      "link": "/proyectos/alejandria",
+      "buttonLabel": "Ver Más"
+    },
+    {
+      "title": "LA COLINA 1",
+      "image": "/laColina.webp",
+      "link": "/proyectos/belmont",
+      "buttonLabel": "Conocer Proyecto"
+    }
+  ],
+  "segunda_seccion": "SECCIÓN DONDE ESTÁ INFORMACIÓN BREVE DE LA CONSTRUCTORA",
+  "companyInfo": {
+    "titulo": "CONSTRUCTORA LA MÍA",
+    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "boton": {
+      "texto": "CONOCE MÁS",
+      "link": "#quienes"
+    }
+  },
+  "formulario_seccion": "SECCIÓN DONDE ESTÁ EL FORMULARIO PARA ENVIARLES UN CORREO",
+  "formularioContacto": {
+    "titulo": "ENVÍANOS UN MENSAJE",
+    "descripcion": "Deja tus datos para contactarte por correo electrónico ó por celular.",
+    "placeholders": {
+      "nombre": "Nombre*",
+      "apellidos": "Apellidos*",
+      "email": "Dirección de Correo Electrónico*",
+      "telefono": "Número de Celular*",
+      "mensaje": "Déjanos un mensaje"
+    },
+    "boton": "ENVIAR!",
+    "mensajeEnviado": "¡Gracias por tu mensaje!"
+  },
+  "footer_seccion": "SECCIÓN DE FOOTER, SE PUEDE ACTUALIZAR INFO SIN PROBLEMA",
+  "footer": {
+  "newsletter": {
+    "titulo": "LOREM IPSUM IS SIMPLY DO",
+    "placeholder": "Lorem Ips",
+    "boton": "LOREM IPS"
+  },
+  "sociales": {
+    "titulo": "ENCUÉNTRANOS EN REDES SOCIALES",
+    "items": [
+      { "nombre": "Facebook", "icono": "facebook" },
+      { "nombre": "Twitter", "icono": "twitter" },
+      { "nombre": "Instagram", "icono": "instagram" },
+      { "nombre": "LinkedIn", "icono": "linkedin" },
+      { "nombre": "YouTube", "icono": "youtube" }
+    ]
+  },
+  "contacto": {
+    "telefono": "123.456.7980",
+    "correo": "info@loremipsum.com",
+    "direccion": "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting"
+  },
+  "legal": "Lorem Ipsum is simply dummy text of the printing and..."
+}
+
+}
