@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Readex_Pro } from 'next/font/google'
+import { Red_Hat_Display } from 'next/font/google'
 
-const readex = Readex_Pro({
+const redHat = Red_Hat_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '700']
+  weight: ['400', '500', '700'],
+  variable: '--font-redhat',
 })
 export const metadata = { /* ... */ }
 
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={readex.className}>{children}</body>
+      <body className={redHat.className}>{children}</body>
     </html>
   )
 }

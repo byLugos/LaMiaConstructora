@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Button({
   children,
   href = '#',
-  bgColor = 'bg-[#967C6D]',
+  bgColor = 'bg-[#454181]',
   textColor = 'text-white',
   className = ''
 }: {
@@ -16,7 +16,7 @@ export default function Button({
   return (
     <Link
       href={href}
-      className={`inline-block ${bgColor} ${textColor} px-6 py-3 rounded-md font-semibold hover:opacity-90 transition ${className}`}
+      className={`inline-block ${bgColor} ${textColor} px-14 py-2 rounded-[10px] font-semibold hover:opacity-90 transition ${className}`}
     >
       {children}
     </Link>

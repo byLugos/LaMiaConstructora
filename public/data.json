@@ -17,6 +17,36 @@
       "image": "/laColina.webp",
       "link": "/proyectos/belmont",
       "buttonLabel": "Conocer Proyecto"
+    },
+    {
+      "title": "LA COLINA 1",
+      "image": "/laColina.webp",
+      "link": "/proyectos/belmont",
+      "buttonLabel": "Conocer Proyecto"
+    },
+    {
+      "title": "LA COLINA 1",
+      "image": "/laColina.webp",
+      "link": "/proyectos/belmont",
+      "buttonLabel": "Conocer Proyecto"
+    },
+    {
+      "title": "LA COLINA 1",
+      "image": "/laColina.webp",
+      "link": "/proyectos/belmont",
+      "buttonLabel": "Conocer Proyecto"
+    },
+    {
+      "title": "LA COLINA 1",
+      "image": "/laColina.webp",
+      "link": "/proyectos/belmont",
+      "buttonLabel": "Conocer Proyecto"
+    },
+    {
+      "title": "LA COLINA 1",
+      "image": "/laColina.webp",
+      "link": "/proyectos/belmont",
+      "buttonLabel": "Conocer Proyecto"
     }
   ],
   "segunda_seccion": "SECCIÓN DONDE ESTÁ INFORMACIÓN BREVE DE LA CONSTRUCTORA",
@@ -44,27 +74,36 @@
   },
   "footer_seccion": "SECCIÓN DE FOOTER, SE PUEDE ACTUALIZAR INFO SIN PROBLEMA",
   "footer": {
-  "newsletter": {
-    "titulo": "LOREM IPSUM IS SIMPLY DO",
-    "placeholder": "Lorem Ips",
-    "boton": "LOREM IPS"
+    "newsletter": {
+      "titulo": "LOREM IPSUM IS SIMPLY DO",
+      "placeholder": "Lorem Ips",
+      "boton": "LOREM IPS"
+    },
+    "sociales": {
+      "titulo": "ENCUÉNTRANOS EN REDES SOCIALES",
+      "items": [
+        { "nombre": "Facebook", "icono": "facebook" },
+        { "nombre": "Twitter", "icono": "twitter" },
+        { "nombre": "Instagram", "icono": "instagram" },
+        { "nombre": "LinkedIn", "icono": "linkedin" },
+        { "nombre": "YouTube", "icono": "youtube" }
+      ]
+    },
+    "contacto": {
+      "telefono": "123.456.7980",
+      "correo": "info@loremipsum.com",
+      "direccion": "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting"
+    },
+    "legal": "Lorem Ipsum is simply dummy text of the printing and..."
   },
-  "sociales": {
-    "titulo": "ENCUÉNTRANOS EN REDES SOCIALES",
-    "items": [
-      { "nombre": "Facebook", "icono": "facebook" },
-      { "nombre": "Twitter", "icono": "twitter" },
-      { "nombre": "Instagram", "icono": "instagram" },
-      { "nombre": "LinkedIn", "icono": "linkedin" },
-      { "nombre": "YouTube", "icono": "youtube" }
-    ]
-  },
-  "contacto": {
-    "telefono": "123.456.7980",
-    "correo": "info@loremipsum.com",
-    "direccion": "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting"
-  },
-  "legal": "Lorem Ipsum is simply dummy text of the printing and..."
-}
-
+  "galeria": [
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img1.jpg" },
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img2.jpg" },
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img3.jpg" },
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img4.jpg" },
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img5.jpg" },
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img6.jpg" },
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img7.jpg" },
+    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img8.jpg" }
+  ]
 }

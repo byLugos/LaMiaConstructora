@@ -1,56 +1,67 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import Title from '@/app/components/ui/Title'
-import Button from '@/app/components/ui/Button'
+import Title from "@/app/components/ui/Title";
+import Button from "@/app/components/ui/Button";
 
 type Slide = {
-  title: string
-  image: string
-  link: string
-  buttonLabel: string
-}
+  title: string;
+  image: string;
+  link: string;
+  buttonLabel: string;
+};
 
 export default function HeroCarousel() {
-  const [slides, setSlides] = useState<Slide[]>([])
-  const [current, setCurrent] = useState(0)
+  const [slides, setSlides] = useState<Slide[]>([]);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    fetch('/data.json')
-      .then(res => res.json())
-      .then(data => setSlides(data.carousel))
-  }, [])
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setSlides(data.carousel));
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent(prev => (prev + 1) % slides.length)
-    }, 6000)
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 6000);
 
-    return () => clearInterval(interval)
-  }, [slides])
+    return () => clearInterval(interval);
+  }, [slides]);
 
-  if (!slides.length) return null
+  if (!slides.length) return null;
 
-  const { title, image, link, buttonLabel } = slides[current]
+  const { title, image, link, buttonLabel } = slides[current];
 
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden">
+    <section className="relative h-[85vh] w-full overflow-hidden bg-white px-4">
       <AnimatePresence mode="wait">
-        <motion.img
-          key={image}
-          src={image}
-          alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-        />
-      </AnimatePresence>
+  <>
+    <motion.div
+      key={`overlay-${image}`}
+      className="absolute inset-0 z-10 bg-black rounded-[30px]"
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 0.4 }}
+      exit={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    />
 
-      <div className="absolute inset-0 bg-black/40 z-0" />
+    <motion.img
+      key={image}
+      src={image}
+      alt={title}
+      className="absolute inset-0 w-full h-full object-cover rounded-[30px] z-0"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 2 }}
+    />
+  </>
+</AnimatePresence>
+
+      <div className="absolute inset-0 bg-black/40 z-0 rounded-[30px] " />
 
       <div className="relative z-10 h-full flex flex-col items-start justify-center px-8 max-w-7xl mx-auto text-white">
         <motion.div
@@ -74,7 +85,7 @@ export default function HeroCarousel() {
         >
           <Button
             href={link}
-            bgColor="bg-[#967C6D]"
+            bgColor="bg-[#454181]"
             textColor="text-white"
             className="flex items-center gap-2 rounded-full"
           >
@@ -83,5 +94,5 @@ export default function HeroCarousel() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -8,7 +8,7 @@ export default function SectionTitle({
     className?: string
   }) {
     return (
-      <h2 className={`text-3xl md:text-4xl font-bold ${color} ${className}`}>
+      <h2 className={`text-3xl md:text-4xl font-extrabold ${color} ${className}`}>
         {children}
       </h2>
     )
