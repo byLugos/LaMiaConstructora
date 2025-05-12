@@ -26,10 +26,9 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Inicio" },
-    { href: "#avance", label: "Avance de Obra" },
-    { href: "#proyectos", label: "Proyectos" },
-    { href: "#ventas", label: "Sala de Ventas" },
-    { href: "#quienes", label: "Quienes somos" },
+    { href: "/galery", label: "Galería" },
+    { href: "/projects", label: "Nuestros proyectos" },
+    { href: "/xdDos", label: "Sala de Ventas" },
   ];
 
   return (
@@ -46,7 +45,7 @@ export default function Navbar() {
 
         <nav className="hidden md:flex gap-8 text-[20px] font-normal text-black items-center">
           {links.map((link) => (
-            <Text className="font-extrabold">
+            <Text className="font-extrabold hover:text-[#454181]">
               <Link href={link.href}>{link.label}</Link>
             </Text>
           ))}
@@ -73,7 +72,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white/8 shadow-md px-4 pb-4 space-y-4">
           {links.map((link) => (
-            <Text>
+            <Text className="hover:text-[#454181]">
               <Link href={link.href}>{link.label}</Link>
             </Text>
           ))}

@@ -9,7 +9,7 @@ export default function Text({
 }) {
   return (
     <p
-      className={`font-[400] text-[20px] leading-[100%] tracking-[0] ${color} ${className}`}
+      className={`font-[400] text-[20px] leading-[140%] tracking-[0] ${color} ${className}`}
     >
       {children}
     </p>

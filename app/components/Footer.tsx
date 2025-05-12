@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import Button from '@/app/components/ui/Button'
-import SectionTitle from '@/app/components/ui/SectionTitle'
+import Subtitle from './ui/SectionSubtitle'
 
 export default function Footer() {
   const [data, setData] = useState<any>(null)
@@ -44,7 +44,7 @@ export default function Footer() {
             animate={topInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <SectionTitle>{data.newsletter.titulo}</SectionTitle>
+            <Subtitle>{data.newsletter.titulo}</Subtitle>
             <div className="mt-6 flex flex-col sm:flex-row gap-4 items-center">
               <input
                 type="text"
@@ -60,7 +60,7 @@ export default function Footer() {
             animate={topInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <SectionTitle>{data.sociales.titulo}</SectionTitle>
+            <Subtitle>{data.sociales.titulo}</Subtitle>
             <div className="flex flex-wrap gap-6 mt-6 justify-center md:justify-start">
               {data.sociales.items.map((item: any) => (
                 <div key={item.nombre} className="flex flex-col items-center text-center text-sm">

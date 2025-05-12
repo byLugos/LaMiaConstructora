@@ -7,43 +7,43 @@
   "primera_seccion": "NO CAMBIAR LAS RUTAS A LAS IMAGENES SIN CONSULTA PREVIA (se pueden cambiar las descripciones de los proyectos)",
   "carousel": [
     {
-      "title": "ALEJANDRÍA",
+      "title": "Alejandría",
       "image": "/alejandria.webp",
       "link": "/proyectos/alejandria",
       "buttonLabel": "Ver Más"
     },
     {
-      "title": "LA COLINA 1",
+      "title": "La colina 1",
       "image": "/laColina.webp",
       "link": "/proyectos/belmont",
       "buttonLabel": "Conocer Proyecto"
     },
     {
-      "title": "LA COLINA 1",
+      "title": "La colina 1",
       "image": "/laColina.webp",
       "link": "/proyectos/belmont",
       "buttonLabel": "Conocer Proyecto"
     },
     {
-      "title": "LA COLINA 1",
+      "title": "La colina 1",
       "image": "/laColina.webp",
       "link": "/proyectos/belmont",
       "buttonLabel": "Conocer Proyecto"
     },
     {
-      "title": "LA COLINA 1",
+      "title": "La colina 1",
       "image": "/laColina.webp",
       "link": "/proyectos/belmont",
       "buttonLabel": "Conocer Proyecto"
     },
     {
-      "title": "LA COLINA 1",
+      "title": "La colina 1",
       "image": "/laColina.webp",
       "link": "/proyectos/belmont",
       "buttonLabel": "Conocer Proyecto"
     },
     {
-      "title": "LA COLINA 1",
+      "title": "La colina 1",
       "image": "/laColina.webp",
       "link": "/proyectos/belmont",
       "buttonLabel": "Conocer Proyecto"
@@ -54,7 +54,7 @@
     "titulo": "CONSTRUCTORA LA MÍA",
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     "boton": {
-      "texto": "CONOCE MÁS",
+      "texto": "Conoce más",
       "link": "#quienes"
     }
   },
@@ -69,7 +69,7 @@
       "telefono": "Número de Celular*",
       "mensaje": "Déjanos un mensaje"
     },
-    "boton": "ENVIAR!",
+    "boton": "Enviar",
     "mensajeEnviado": "¡Gracias por tu mensaje!"
   },
   "footer_seccion": "SECCIÓN DE FOOTER, SE PUEDE ACTUALIZAR INFO SIN PROBLEMA",
@@ -77,7 +77,7 @@
     "newsletter": {
       "titulo": "LOREM IPSUM IS SIMPLY DO",
       "placeholder": "Lorem Ips",
-      "boton": "LOREM IPS"
+      "boton": "Contáctanos"
     },
     "sociales": {
       "titulo": "ENCUÉNTRANOS EN REDES SOCIALES",
@@ -97,13 +97,95 @@
     "legal": "Lorem Ipsum is simply dummy text of the printing and..."
   },
   "galeria": [
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img1.jpg" },
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img2.jpg" },
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img3.jpg" },
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img4.jpg" },
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img5.jpg" },
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img6.jpg" },
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img7.jpg" },
-    { "titulo": "Lorem Ipsum", "imagen": "/galeria/img8.jpg" }
-  ]
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img1.jpg",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img2.jpg",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img3.jpg",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img4.jpg",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img5.jpg",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img6.jpg",
+      "categoria": "La Colina"
+    },
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img7.jpg",
+      "categoria": "La Colina"
+    },
+    {
+      "titulo": "Lorem Ipsum",
+      "imagen": "/galeria/img8.jpg",
+      "categoria": "La Colina"
+    }
+  ],
+  "simpleBox": {
+    "backgroundImage": "/laColina.webp",
+    "title": "Lorem",
+    "buttonLabel": "Acción"
+  },
+
+  "miniCarousel": [
+    {
+      "title": "Proyecto 1",
+      "image": "/laColina.webp",
+      "link": "https://www.youtube.com/watch?v=1"
+    },
+    {
+      "title": "Proyecto 2",
+      "image": "/laColina.webp",
+      "link": "https://www.youtube.com/watch?v=2"
+    },
+    {
+      "title": "Proyecto 3",
+      "image": "/laColina.webp",
+      "link": "https://www.youtube.com/watch?v=3"
+    },
+    {
+      "title": "Proyecto 3",
+      "image": "/laColina.webp",
+      "link": "https://www.youtube.com/watch?v=4"
+    },
+    {
+      "title": "Proyecto 3",
+      "image": "/laColina.webp",
+      "link": "https://www.youtube.com/watch?v=5"
+    }
+  ],
+  "nosotrosPromociones": {
+    "titulo": "CONOCE NUESTRAS PROMOCIONES",
+    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "boton": {
+      "texto": "Conoce más",
+      "link": "#quienes"
+    }
+  },
+  "whyus": {
+    "titulo": "CONOCE NUESTRAS PROMOCIONES",
+    "titulodos": "XDasfasfsa",
+    "descripcion": "Lorem Igadgasdgasdgj3282341 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry",
+    "boton": {
+      "texto": "Conoce más",
+      "link": "#quienes"
+    }
+  }
 }

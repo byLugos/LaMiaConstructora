@@ -1,22 +1,25 @@
 import Navbar from '@/app/components/Navbar'
-import Hero from '@/app/components/Hero'
+import Hero from '@/app/main/Hero'
 import CompanyInfo from '@/app/components/CompanyInfo'
-import ProjectsCarousel from '@/app/components/ProjectsCarousel'
-import Galery from '@/app/components/Galery'
+import ProjectsCarousel from '@/app/main/ProjectsCarousel'
+import Galery from '@/app/main/Galery'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import SimpleBox from './main/SimpleBox'
+import MiniCarousel from './main/VideoCarousel'
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero/>
-      <CompanyInfo />
+      <CompanyInfo dataPath='companyInfo' />
       <ProjectsCarousel/>
       <Galery/>
+      <SimpleBox/>
+      <MiniCarousel/>
       <ContactForm/>
       <Footer/>
-      {/* Aquí vendrá Hero y demás secciones */}
     </>
   )
 }

@@ -16,7 +16,11 @@ type Info = {
   }
 }
 
-export default function CompanyInfo() {
+type CompanyInfoProps = {
+  dataPath: string; // Ruta o clave del JSON a consumir
+}
+
+export default function CompanyInfo({ dataPath }: CompanyInfoProps) {
   const [info, setInfo] = useState<Info | null>(null)
 
   const { ref, inView } = useInView({
@@ -26,9 +30,9 @@ export default function CompanyInfo() {
 
   useEffect(() => {
     fetch('/data.json')
-      .then(res => res.json())
-      .then(data => setInfo(data.companyInfo))
-  }, [])
+      .then((res) => res.json())
+      .then((data) => setInfo(data[dataPath])) // Usamos la prop dataPath para acceder a la clave del JSON
+  }, [dataPath])
 
   if (!info) return null
 
@@ -51,7 +55,7 @@ export default function CompanyInfo() {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="max-w-3xl mx-auto mb-8"
       >
-        <Text>{info.descripcion}</Text>
+        <Text className='mb-4'>{info.descripcion}</Text>
       </motion.div>
 
       <motion.div
