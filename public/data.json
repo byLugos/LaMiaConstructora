@@ -180,12 +180,114 @@
     }
   },
   "whyus": {
-    "titulo": "CONOCE NUESTRAS PROMOCIONES",
+    "titulo": "¿POR QUÉ NOSOTROS?",
     "titulodos": "XDasfasfsa",
     "descripcion": "Lorem Igadgasdgasdgj3282341 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry",
     "boton": {
       "texto": "Conoce más",
       "link": "#quienes"
     }
-  }
+  },
+  "projectos": [
+    {
+      "title": "La Colina",
+      "image": "/laColina.webp",
+      "features": [
+        {
+          "title": "Número de Habitaciones",
+          "value": "3"
+        },
+        {
+          "title": "Metros Totales",
+          "value": "80 m²"
+        },
+        {
+          "title": "Cocina Integral",
+          "value": "Sí"
+        }
+      ]
+    },
+    {
+      "title": "Alejandría",
+      "image": "/alejandria.webp",
+      "features": [
+        {
+          "title": "Número de Habitaciones",
+          "value": "2"
+        },
+        {
+          "title": "Metros Totales",
+          "value": "65 m²"
+        },
+        {
+          "title": "Cocina Integral",
+          "value": "Sí"
+        }
+      ]
+    },
+    {
+      "title": "XD",
+      "image": "/alejandria.webp",
+      "features": [
+        {
+          "title": "Número de Habitaciones",
+          "value": "2"
+        },
+        {
+          "title": "Metros Totales",
+          "value": "65 m²"
+        },
+        {
+          "title": "Cocina Integral",
+          "value": "Sí"
+        }
+      ]
+    },
+    {
+      "title": "XD DOS",
+      "image": "/alejandria.webp",
+      "features": [
+        {
+          "title": "Número de Habitaciones",
+          "value": "2"
+        },
+        {
+          "title": "Metros Totales",
+          "value": "65 m²"
+        },
+        {
+          "title": "Cocina Integral",
+          "value": "Sí"
+        }
+      ]
+    }
+  ],
+
+  "empleados": [
+    {
+      "nombre": "Juan Pérez",
+      "imagen": "/alejandria.webp",
+      "descripcion": "Juan es el gerente de operaciones, apasionado por la tecnología y la gestión de equipos."
+    },
+    {
+      "nombre": "Ana García",
+      "imagen": "/alejandria.webp",
+      "descripcion": "Ana es la encargada de marketing, con un gran enfoque en redes sociales y estrategia digital."
+    },
+    {
+      "nombre": "Carlos López",
+      "imagen": "/alejandria.webp",
+      "descripcion": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
+    },
+    {
+      "nombre": "Ian Rodriguez",
+      "imagen": "/alejandria.webp",
+      "descripcion": "Mateo es el director de programación, polivalente"
+    },
+    {
+      "nombre": "Alma Marcela Gozo",
+      "imagen": "/alejandria.webp",
+      "descripcion": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
+    }
+  ]
 }
