@@ -16,6 +16,7 @@ type Feature = {
 type Project = {
   title: string
   image: string
+  url : string
   features: Feature[]
 }
 
@@ -46,6 +47,7 @@ export default function Cards() {
             key={index}
             className="group border rounded-lg overflow-hidden shadow-lg transform bg-[#454181]/90 hover:scale-105 duration-300 ease-in-out hover:bg-[#454181]"
           >
+            <a href={project.url}>
             <img
               src={project.image}
               alt={project.title}
@@ -66,6 +68,7 @@ export default function Cards() {
                 })}
               </ul>
             </div>
+            </a>
           </div>
         ))}
       </div>

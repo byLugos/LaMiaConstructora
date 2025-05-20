@@ -30,11 +30,11 @@ export default function SimpleBox() {
   return (
     <section
       ref={ref}
-      className="relative bg-cover bg-center h-[80vh] flex items-center justify-center"
+      className="relative bg-cover bg-center h-[80vh] w-full flex items-center justify-center"
       style={{ backgroundImage: `url(${data.backgroundImage})` }}
     >
       <motion.div
-        className="relative z-10 p-8 rounded-lg text-center max-w-md mx-auto border-4 border-[#454181] bg-white/60"
+        className="relative z-10 p-8 rounded-lg text-center max-w-md mx-auto border-4 border-[#454181] bg-white/90"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{

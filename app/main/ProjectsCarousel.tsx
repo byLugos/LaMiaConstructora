@@ -7,13 +7,14 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 import { useInView } from 'react-intersection-observer'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import SectionTitle from '@/app/components/ui/SectionTitle'
 
 type Proyecto = {
   title: string
   image: string
+  logo: string 
   link: string
   buttonLabel: string
 }
@@ -21,6 +22,8 @@ type Proyecto = {
 export default function ProyectosCarousel() {
   const [proyectos, setProyectos] = useState<Proyecto[]>([])
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
+
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null)
 
   useEffect(() => {
     fetch('/data.json')
@@ -71,18 +74,38 @@ export default function ProyectosCarousel() {
         >
           {proyectos.map((proyecto, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-[90%] max-w-[560px] mx-auto rounded-[20px] overflow-hidden shadow-lg">
+              {/* Usamos un enlace para navegar */}
+              <a
+                href={proyecto.link || '/alejandria'}
+                className="relative w-[90%] max-w-[560px] mx-auto rounded-[20px] overflow-hidden shadow-lg block"
+                onMouseEnter={() => setHoverIndex(index)}
+                onMouseLeave={() => setHoverIndex(null)}
+              >
                 <img
                   src={proyecto.image}
                   alt={proyecto.title}
                   className="w-full h-[400px] object-cover"
                 />
-                <div className="absolute bottom-4 left-4 bg-[#00000088] px-4 py-2 rounded-md">
-                  <h3 className="text-white text-base md:text-lg font-semibold">
-                    {proyecto.title}
-                  </h3>
-                </div>
-              </div>
+
+                {/* Contenedor del logo con animación */}
+                <AnimatePresence>
+                  {hoverIndex === index && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.4, ease: 'easeInOut' }}
+                      className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center pointer-events-none rounded-[20px]"
+                    >
+                      <img
+                        src={proyecto.logo}
+                        alt={`${proyecto.title} logo`}
+                        className="max-h-24 max-w-48 object-contain"
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </a>
             </SwiperSlide>
           ))}
         </Swiper>

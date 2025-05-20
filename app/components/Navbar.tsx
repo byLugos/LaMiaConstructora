@@ -29,7 +29,6 @@ export default function Navbar() {
     { href: "/galery", label: "Galería" },
     { href: "/projects", label: "Nuestros proyectos" },
     { href: "/ourteam", label: "Quiénes somos" },
-    { href: "/xdDos", label: "Sala de Ventas" },
   ];
 
   return (

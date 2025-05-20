@@ -9,8 +9,8 @@ export default function Galery() {
     <>
       <Navbar />
       <HeroSmall
-      title='HOLA'
-      image='/alejandria.webp'/>
+      title='Galería'
+      image='/fondoHero.webp'/>
       <Galerys/>
       <AboutUs />
       <Footer/>

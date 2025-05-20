@@ -8,44 +8,20 @@
   "carousel": [
     {
       "title": "Alejandría",
-      "image": "/alejandria.webp",
-      "link": "/proyectos/alejandria",
+      "logo": "/alejandria_logo.webp",
+      "logoWidth": "w-42",
+      "logoHeight": "h-30",
+      "image": "/alejandria_alt.webp",
+      "link": "/alejandria",
       "buttonLabel": "Ver Más"
     },
     {
-      "title": "La colina 1",
-      "image": "/laColina.webp",
-      "link": "/proyectos/belmont",
-      "buttonLabel": "Conocer Proyecto"
-    },
-    {
-      "title": "La colina 1",
-      "image": "/laColina.webp",
-      "link": "/proyectos/belmont",
-      "buttonLabel": "Conocer Proyecto"
-    },
-    {
-      "title": "La colina 1",
-      "image": "/laColina.webp",
-      "link": "/proyectos/belmont",
-      "buttonLabel": "Conocer Proyecto"
-    },
-    {
-      "title": "La colina 1",
-      "image": "/laColina.webp",
-      "link": "/proyectos/belmont",
-      "buttonLabel": "Conocer Proyecto"
-    },
-    {
-      "title": "La colina 1",
-      "image": "/laColina.webp",
-      "link": "/proyectos/belmont",
-      "buttonLabel": "Conocer Proyecto"
-    },
-    {
-      "title": "La colina 1",
-      "image": "/laColina.webp",
-      "link": "/proyectos/belmont",
+      "title": "La Colina 1",
+      "logo": "/colina_logo.webp",
+      "logoWidth": "w-72",
+      "logoHeight": "h-54",
+      "image": "/colina_altdos.webp",
+      "link": "/lacolina",
       "buttonLabel": "Conocer Proyecto"
     }
   ],
@@ -55,7 +31,7 @@
     "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     "boton": {
       "texto": "Conoce más",
-      "link": "#quienes"
+      "link": "/ourteam"
     }
   },
   "formulario_seccion": "SECCIÓN DONDE ESTÁ EL FORMULARIO PARA ENVIARLES UN CORREO",
@@ -98,77 +74,102 @@
   },
   "galeria": [
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img1.jpg",
+      "titulo": "Zona común",
+      "imagen": "/zonacomun.webp",
       "categoria": "Alejandria"
     },
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img2.jpg",
+      "titulo": "Vista cenital",
+      "imagen": "/vistacenital.webp",
       "categoria": "Alejandria"
     },
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img3.jpg",
+      "titulo": "Portería",
+      "imagen": "/porteria.webp",
       "categoria": "Alejandria"
     },
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img4.jpg",
+      "titulo": "Parqueaderos",
+      "imagen": "/parqueadero.webp",
       "categoria": "Alejandria"
     },
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img5.jpg",
+      "titulo": "Vista lateral izquierda",
+      "imagen": "/lateralizquierdo.webp",
       "categoria": "Alejandria"
     },
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img6.jpg",
+      "titulo": "Vista lateral derecha",
+      "imagen": "/lateralderecho.webp",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Vista trasera",
+      "imagen": "/trasera.webp",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Vista frontal",
+      "imagen": "/frontaluno.webp",
+      "categoria": "Alejandria"
+    },
+    {
+      "titulo": "Vista general",
+      "imagen": "/vista_general.webp",
       "categoria": "La Colina"
     },
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img7.jpg",
+      "titulo": "Vista externa",
+      "imagen": "/externa.webp",
       "categoria": "La Colina"
     },
     {
-      "titulo": "Lorem Ipsum",
-      "imagen": "/galeria/img8.jpg",
+      "titulo": "Vista externa dos",
+      "imagen": "/externa_dos.webp",
+      "categoria": "La Colina"
+    },
+    {
+      "titulo": "Parque de niños",
+      "imagen": "/parque.webp",
+      "categoria": "La Colina"
+    },
+    {
+      "titulo": "Parque central",
+      "imagen": "/fuente.webp",
+      "categoria": "La Colina"
+    },
+    {
+      "titulo": "Parque central dos",
+      "imagen": "/fuente_dos.webp",
+      "categoria": "La Colina"
+    },
+    {
+      "titulo": "Parque central tres",
+      "imagen": "/fuente_tres.webp",
+      "categoria": "La Colina"
+    },
+    {
+      "titulo": "Vista balcón",
+      "imagen": "/balcon.webp",
       "categoria": "La Colina"
     }
   ],
   "simpleBox": {
-    "backgroundImage": "/laColina.webp",
-    "title": "Lorem",
-    "buttonLabel": "Acción"
+    "backgroundImage": "/avanceObra.webp",
+    "title": "Construyendo el futuro",
+    "buttonLabel": "Link a vídeo"
   },
 
   "miniCarousel": [
     {
-      "title": "Proyecto 1",
-      "image": "/laColina.webp",
+      "title": "Proyecto Alejandría",
+      "image": "/lateralizquierdo.webp",
       "link": "https://www.youtube.com/watch?v=1"
     },
     {
-      "title": "Proyecto 2",
-      "image": "/laColina.webp",
+      "title": "Proyecto La Colina",
+      "image": "/colina_alt.webp",
       "link": "https://www.youtube.com/watch?v=2"
-    },
-    {
-      "title": "Proyecto 3",
-      "image": "/laColina.webp",
-      "link": "https://www.youtube.com/watch?v=3"
-    },
-    {
-      "title": "Proyecto 3",
-      "image": "/laColina.webp",
-      "link": "https://www.youtube.com/watch?v=4"
-    },
-    {
-      "title": "Proyecto 3",
-      "image": "/laColina.webp",
-      "link": "https://www.youtube.com/watch?v=5"
     }
   ],
   "nosotrosPromociones": {
@@ -191,7 +192,8 @@
   "projectos": [
     {
       "title": "La Colina",
-      "image": "/laColina.webp",
+      "image": "/colina_alt.webp",
+      "url": "/colina",
       "features": [
         {
           "title": "Número de Habitaciones",
@@ -209,43 +211,8 @@
     },
     {
       "title": "Alejandría",
-      "image": "/alejandria.webp",
-      "features": [
-        {
-          "title": "Número de Habitaciones",
-          "value": "2"
-        },
-        {
-          "title": "Metros Totales",
-          "value": "65 m²"
-        },
-        {
-          "title": "Cocina Integral",
-          "value": "Sí"
-        }
-      ]
-    },
-    {
-      "title": "XD",
-      "image": "/alejandria.webp",
-      "features": [
-        {
-          "title": "Número de Habitaciones",
-          "value": "2"
-        },
-        {
-          "title": "Metros Totales",
-          "value": "65 m²"
-        },
-        {
-          "title": "Cocina Integral",
-          "value": "Sí"
-        }
-      ]
-    },
-    {
-      "title": "XD DOS",
-      "image": "/alejandria.webp",
+      "image": "/alejandria_alt.webp",
+      "url": "/alejandria",
       "features": [
         {
           "title": "Número de Habitaciones",
@@ -266,28 +233,109 @@
   "empleados": [
     {
       "nombre": "Juan Pérez",
-      "imagen": "/alejandria.webp",
+      "imagen": "/groupDos.webp",
       "descripcion": "Juan es el gerente de operaciones, apasionado por la tecnología y la gestión de equipos."
     },
     {
       "nombre": "Ana García",
-      "imagen": "/alejandria.webp",
+      "imagen": "/groupDos.webp",
       "descripcion": "Ana es la encargada de marketing, con un gran enfoque en redes sociales y estrategia digital."
     },
     {
       "nombre": "Carlos López",
-      "imagen": "/alejandria.webp",
+      "imagen": "/groupDos.webp",
       "descripcion": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
     },
     {
       "nombre": "Ian Rodriguez",
-      "imagen": "/alejandria.webp",
+      "imagen": "/xd.jpg",
       "descripcion": "Mateo es el director de programación, polivalente"
     },
     {
       "nombre": "Alma Marcela Gozo",
-      "imagen": "/alejandria.webp",
+      "imagen": "/groupDos.webp",
       "descripcion": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
     }
-  ]
+  ],
+  "project": {
+    "title": "Alejandría",
+    "location": "Sogamoso / Norte",
+    "logo": "/lateralderecho.webp",
+    "status": "En proceso",
+    "description": "Breve párrafo descriptivo del proyecto..Carlos es el director dCarlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.io..",
+    "images": [
+      "/frontalUno.webp",
+      "/lateralizquierdo.webp",
+      "/porteria.webp",
+      "/trasera.webp",
+      "/vistacenital.webp"
+    ]
+  },
+  "projectTechnicalDetails": {
+    "alejandria": {
+      "units": [
+        {
+          "unitTitle": "Apartamento Tipo A",
+          "planos": ["/isoalejandria.webp", "/isoalejandriados.webp"],
+          "features": [
+            { "title": "Metros construidos", "value": "75 m²" },
+            { "title": "Habitaciones", "value": "3" },
+            { "title": "Baños", "value": "2" },
+            { "title": "Parqueadero", "value": "1" }
+          ],
+          "description": "Apartamento espacioso con excelente iluminación natural... mento espacioso con excelente iluminación nmento espacioso con excelente iluminación nmento espacioso con excelente iluminación nmento espacioso con excelente iluminación n",
+          "icons": [
+            { "title": "Zona de ropa" },
+            { "title": "Cocina" },
+            { "title": "Bañera" },
+            { "title": "Parqueadero" },
+            { "title": "Sala" },
+            { "title": "Entrada" },
+            { "title": "Baños" },
+            { "title": "Habitaciones" }
+          ]
+        },
+        {
+          "unitTitle": "Apartamento Tipo B",
+          "planos": ["/alejandria/plano3.webp", "/alejandria/plano4.webp"],
+          "features": [
+            { "title": "Metros construidos", "value": "85 m²" },
+            { "title": "Habitaciones", "value": "4" },
+            { "title": "Baños", "value": "3" },
+            { "title": "Parqueadero", "value": "2" }
+          ],
+          "description": "Apartamento familiar con espacios amplios...",
+          "icons": [
+            { "title": "Zona de ropa" },
+            { "title": "Cocina" },
+            { "title": "Bañera" },
+            { "title": "Parqueadero" },
+            { "title": "Sala" },
+            { "title": "Entrada" },
+            { "title": "Baños" },
+            { "title": "Habitaciones" }
+          ]
+        }
+      ]
+    },
+    "laColina": {
+      "units": [
+        {
+          "unitTitle": "Apartamento Tipo A",
+          "planos": ["/laColina/plano1.webp"],
+          "features": [
+            { "title": "Metros construidos", "value": "70 m²" },
+            { "title": "Habitaciones", "value": "3" },
+            { "title": "Baños", "value": "2" }
+          ],
+          "description": "Apartamento moderno en La Colina...",
+          "icons": [
+            { "title": "Zona de ropa" },
+            { "title": "Cocina" },
+            { "title": "Bañera" }
+          ]
+        }
+      ]
+    }
+  }
 }

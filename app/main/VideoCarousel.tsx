@@ -49,7 +49,7 @@ export default function MiniCarousel() {
         <Text className="mb-4">
           Aquí puedes ver los vídeos de avances y próximos lanzamientos
         </Text>
-        <Button href="https://www.youtube.com/">Lorem</Button>
+        <Button href="https://www.youtube.com/@CONSTRUCTORALAMIA">Suscríbete!</Button>
       </motion.div>
 
       <motion.div
@@ -93,7 +93,7 @@ export default function MiniCarousel() {
                   <img
                     src={proyecto.image}
                     alt={proyecto.title}
-                    className="w-full h-[200px] object-cover rounded-[20px] filter blur-sm"
+                    className="w-full h-[200px] object-cover rounded-[20px] filter blur-[1px]"
                   />
                 </a>
 
