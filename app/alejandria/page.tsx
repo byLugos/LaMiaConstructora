@@ -1,18 +1,18 @@
 import Navbar from '@/app/components/Navbar'
 import Footer from '@/app/components/Footer'
 import HeroSmall from '../components/HeroSmall'
-import ProjectIntroSection from './ProjectIntro'
-import ProjectTechnical from './ProjectTechnical'
+import ProjectIntro from '@/app/components/ProjectIntro'
+import ProjectDetails from '@/app/components/ProjectTechnical'
 import Cards from './Cards'
 export default function Galery() {
   return (
     <>
       <Navbar />
       <HeroSmall
-      title='NUESTROS PROYECTOS'
+      title='Alejandría'
       image='/alejandria_alt.webp'/>
-      <ProjectIntroSection/>
-      <ProjectTechnical projectName='alejandria' unitIndex={0}/>
+      <ProjectIntro projectName='alejandria' logoWidth='250px' logoHeight='200'/>
+      <ProjectDetails projectName='alejandria' unitIndex={0}/>
       <Cards/>
       <Footer/>
     </>

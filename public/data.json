@@ -21,7 +21,7 @@
       "logoWidth": "w-72",
       "logoHeight": "h-54",
       "image": "/colina_altdos.webp",
-      "link": "/lacolina",
+      "link": "/colina",
       "buttonLabel": "Conocer Proyecto"
     }
   ],
@@ -258,18 +258,32 @@
     }
   ],
   "project": {
-    "title": "Alejandría",
-    "location": "Sogamoso / Norte",
-    "logo": "/lateralderecho.webp",
-    "status": "En proceso",
-    "description": "Breve párrafo descriptivo del proyecto..Carlos es el director dCarlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario.io..",
-    "images": [
-      "/frontalUno.webp",
-      "/lateralizquierdo.webp",
-      "/porteria.webp",
-      "/trasera.webp",
-      "/vistacenital.webp"
-    ]
+    "alejandria": {
+      "title": "Alejandría",
+      "location": "Sogamoso / Norte",
+      "logo": "/alejandria_logo.webp",
+      "status": "En proceso",
+      "description": "Breve párrafo descriptivo del proyecto...",
+      "images": [
+        "/frontalUno.webp",
+        "/lateralizquierdo.webp",
+        "/porteria.webp",
+        "/trasera.webp",
+        "/vistacenital.webp"
+      ]
+    },
+    "colina": {
+      "title": "La Colina",
+      "location": "Tunja / Sur",
+      "logo": "/colina_logo.webp",
+      "status": "Finalizado",
+      "description": "Descripción para el proyecto La Colina...",
+      "images": [
+        "/balcon.webp",
+        "/fuente_tres.webp",
+        "/fuente_dos.webp"
+      ]
+    }
   },
   "projectTechnicalDetails": {
     "alejandria": {
@@ -294,35 +308,14 @@
             { "title": "Baños" },
             { "title": "Habitaciones" }
           ]
-        },
-        {
-          "unitTitle": "Apartamento Tipo B",
-          "planos": ["/alejandria/plano3.webp", "/alejandria/plano4.webp"],
-          "features": [
-            { "title": "Metros construidos", "value": "85 m²" },
-            { "title": "Habitaciones", "value": "4" },
-            { "title": "Baños", "value": "3" },
-            { "title": "Parqueadero", "value": "2" }
-          ],
-          "description": "Apartamento familiar con espacios amplios...",
-          "icons": [
-            { "title": "Zona de ropa" },
-            { "title": "Cocina" },
-            { "title": "Bañera" },
-            { "title": "Parqueadero" },
-            { "title": "Sala" },
-            { "title": "Entrada" },
-            { "title": "Baños" },
-            { "title": "Habitaciones" }
-          ]
         }
       ]
     },
-    "laColina": {
+    "colina": {
       "units": [
         {
           "unitTitle": "Apartamento Tipo A",
-          "planos": ["/laColina/plano1.webp"],
+          "planos": ["/isocolina.webp","/isocolinados.webp"],
           "features": [
             { "title": "Metros construidos", "value": "70 m²" },
             { "title": "Habitaciones", "value": "3" },

@@ -14,30 +14,53 @@ type ProjectData = {
   title: string
   location: string
   status: string
-  logo : string
+  logo: string
   description: string
   images: string[]
 }
 
-export default function ProjectIntroSection() {
-  const [project, setProject] = useState<ProjectData | null>(null)
+type ProjectsData = {
+  [key: string]: ProjectData
+}
+
+interface Props {
+  projectName: string
+  logoWidth?: string  
+  logoHeight?: string
+}
+
+export default function ProjectIntroSection({
+  projectName,
+  logoWidth = '120px',
+  logoHeight = '150px',
+}: Props) {
+  const [projects, setProjects] = useState<ProjectsData | null>(null)
 
   useEffect(() => {
     fetch('/data.json')
       .then(res => res.json())
-      .then(data => setProject(data.project))
+      .then(json => setProjects(json.project))
   }, [])
 
-  if (!project) return null
+  if (!projects) return null
+
+  const project = projects[projectName]
+
+  if (!project) return <p>Proyecto no encontrado.</p>
 
   return (
     <section className="w-full mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 bg-white">
       <div className="lg:w-1/2 flex flex-col justify-center">
         <SectionTitle className="mb-6">{project.title}</SectionTitle>
-        <img src={project.logo} alt={project.title} className='w-1/2 mb-4'></img>
+        <img
+          src={project.logo}
+          alt={project.title}
+          style={{ width: logoWidth, height: logoHeight }}
+          className="mb-4"
+        />
         <SectionSubtitle className="mb-2">{project.location}</SectionSubtitle>
         <Text className="mb-4 text-yellow-600 font-bold">{project.status}</Text>
-        <Text className='mb-4'>{project.description}</Text>
+        <Text className="mb-4">{project.description}</Text>
       </div>
       <div className="lg:w-1/2">
         <Swiper

@@ -13,67 +13,71 @@ type GaleriaItem = {
 export default function Galery() {
   const [items, setItems] = useState<GaleriaItem[]>([])
   const [filteredItems, setFilteredItems] = useState<GaleriaItem[]>([])
-  const [activeCategory, setActiveCategory] = useState<string>('all') 
+  const [activeCategory, setActiveCategory] = useState<string>('') 
+
   useEffect(() => {
     fetch('/data.json')
       .then(res => res.json())
       .then(data => {
         setItems(data.galeria)
-        setFilteredItems(data.galeria) 
+        const categoriasUnicas = Array.from(new Set(data.galeria.map((i: GaleriaItem) => i.categoria)))
+        setActiveCategory(categoriasUnicas[0] || '')
+        setFilteredItems(data.galeria.filter((i: GaleriaItem) => i.categoria === categoriasUnicas[0]))
       })
   }, [])
 
   const filterItems = (category: string) => {
     setActiveCategory(category)
-    if (category === 'all') {
-      setFilteredItems(items)
-    } else {
-      setFilteredItems(items.filter(item => item.categoria === category))
-    }
+    setFilteredItems(items.filter(item => item.categoria === category))
   }
 
-const categories = ['all', ...Array.from(new Set(items.map(item => item.categoria)))];
+  // Sólo categorías reales, sin 'all'
+  const categories = Array.from(new Set(items.map(item => item.categoria)))
 
   if (!items.length) return null
 
   return (
-    <section className="bg-white py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white py-20 px-0 w-full">
+      {/* El contenedor ocupa 100% ancho */}
+      <div className="w-full">
         <SectionTitle className="text-center mb-12 text-[#131A24]">
           NUESTRA GALERÍA
         </SectionTitle>
 
+        {/* Botones de filtro */}
         <div className="text-center mb-8">
           {categories.map((category, index) => (
             <button
               key={index}
               onClick={() => filterItems(category)}
-              className={`${
-                activeCategory === category ? 'bg-[#454181] text-white'  : 'bg-[#F5AA4D]'
-              } py-2 px-6 mx-2 rounded-md font-semibold`}
+              className={`py-2 px-6 mx-2 rounded-md font-semibold transition-colors duration-300 ${
+                activeCategory === category 
+                  ? 'bg-[#454181] text-white' 
+                  : 'bg-[#F5AA4D]/50 text-white hover:bg-[#d7932e]'
+              }`}
             >
-              {category === 'all' ? 'Todas' : category}
+              {category}
             </button>
           ))}
         </div>
 
-        {/* Galería */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-3 md:grid-cols-4 w-full">
           {filteredItems.map((item, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-lg bg-gray-200 flex justify-center items-center"
+              className="relative overflow-hidden rounded-none aspect-[4/3]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <img
                 src={item.imagen}
                 alt={item.titulo}
-                className="w-full h-full object-cover transform hover:scale-105 transition-all duration-300"
+                className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
+                style={{ display: 'block' }} 
               />
-              <div className="absolute inset-0 bg-black/50 flex justify-center items-center">
-                <p className="text-white text-lg font-semibold">{item.titulo}</p>
+              <div className="absolute bottom-1 left-1 bg-black bg-opacity-60 px-1.5 py-0.5 rounded text-xs text-white select-none pointer-events-none">
+                {item.titulo}
               </div>
             </motion.div>
           ))}
@@ -82,3 +86,5 @@ const categories = ['all', ...Array.from(new Set(items.map(item => item.categori
     </section>
   )
 }
+
+
