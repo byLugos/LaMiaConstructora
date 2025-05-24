@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -16,7 +17,7 @@ import Button from '../components/ui/Button'
 type Proyecto = {
   title: string
   image: string
-  link: string
+  link_video: string
 }
 
 export default function MiniCarousel() {
@@ -26,7 +27,7 @@ export default function MiniCarousel() {
   useEffect(() => {
     fetch('/data.json')
       .then((res) => res.json())
-      .then((data) => setProyectos(data.miniCarousel)) 
+      .then((data) => setProyectos(data.carousel))
   }, [])
 
   if (!proyectos.length) return null
@@ -60,15 +61,15 @@ export default function MiniCarousel() {
       >
         <Swiper
           spaceBetween={30}
-          slidesPerView={1}  
+          slidesPerView={1}
           pagination={{ clickable: true }}
           breakpoints={{
             768: {
-              slidesPerView: 2,  
+              slidesPerView: 2,
               spaceBetween: 50,
             },
             1024: {
-              slidesPerView: 3,  
+              slidesPerView: 3,
               spaceBetween: 60,
             },
             1440: {
@@ -79,30 +80,49 @@ export default function MiniCarousel() {
           modules={[Pagination]}
           className="pb-12"
         >
-          {proyectos.map((proyecto, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative w-full max-w-[350px]">
-                <a href={proyecto.link}>
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                    <img
-                      src="/youtube.svg"
-                      alt="YouTube"
-                      className="w-12 h-12"
-                    />
-                  </div>
-                  <img
-                    src={proyecto.image}
-                    alt={proyecto.title}
-                    className="w-full h-[200px] object-cover rounded-[20px] filter blur-[1px]"
-                  />
-                </a>
+          {proyectos.map((proyecto, index) => {
+            // Detectar si es link externo (empieza con http)
+            const isExternal = proyecto.link_video.startsWith('http')
 
-                <div className="absolute top-4 left-4 text-white text-[10px] font-semibold bg-[#131A24] bg-opacity-50 px-4 py-2 rounded-lg">
-                  {proyecto.title}
+            return (
+              <SwiperSlide key={index}>
+                <div className="relative w-full max-w-[350px]">
+                  {isExternal ? (
+                    <a
+                      href={proyecto.link_video}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block relative"
+                    >
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                        <img src="/youtube.svg" alt="YouTube" className="w-12 h-12" />
+                      </div>
+                      <img
+                        src={proyecto.image}
+                        alt={proyecto.title}
+                        className="w-full h-[200px] object-cover rounded-[20px] filter blur-[1px]"
+                      />
+                    </a>
+                  ) : (
+                    <Link href={proyecto.link_video} className="block relative">
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                        <img src="/youtube.svg" alt="YouTube" className="w-12 h-12" />
+                      </div>
+                      <img
+                        src={proyecto.image}
+                        alt={proyecto.title}
+                        className="w-full h-[200px] object-cover rounded-[20px] filter blur-[1px]"
+                      />
+                    </Link>
+                  )}
+
+                  <div className="absolute top-4 left-4 text-white text-[10px] font-semibold bg-[#131A24] bg-opacity-50 px-4 py-2 rounded-lg">
+                    {proyecto.title}
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
       </motion.div>
     </section>

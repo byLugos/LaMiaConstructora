@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <CompanyInfo dataPath="companyInfo" />
+      <CompanyInfo dataPath="companyInfo.general" />
       <ProjectsCarousel />
       <MiniCarousel />
       <SimpleBox />

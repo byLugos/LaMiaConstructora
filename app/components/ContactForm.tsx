@@ -8,22 +8,30 @@ import Text from '@/app/components/ui/Text'
 import Button from '@/app/components/ui/Button'
 
 type FormContent = {
-  titulo: string
-  descripcion: string
-  boton: string
-  mensajeEnviado: string
+  title: string
+  description: string
+  button: string
+  successMessage: string
   placeholders: {
-    nombre: string
-    apellidos: string
+    name: string
+    lastname: string
     email: string
-    telefono: string
-    mensaje: string
+    phone: string
+    message: string
   }
 }
 
 export default function ContactForm() {
   const [data, setData] = useState<FormContent | null>(null)
   const [enviado, setEnviado] = useState(false)
+
+  const [formData, setFormData] = useState({
+    name: '',
+    lastname: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -33,12 +41,20 @@ export default function ContactForm() {
   useEffect(() => {
     fetch('/data.json')
       .then(res => res.json())
-      .then(data => setData(data.formularioContacto))
+      .then(data => setData(data.forms.contact))
   }, [])
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setEnviado(true)
+    setFormData({ name: '', lastname: '', email: '', phone: '', message: '' })
     setTimeout(() => setEnviado(false), 5000)
   }
 
@@ -55,7 +71,7 @@ export default function ContactForm() {
         transition={{ duration: 0.6 }}
       >
         <SectionTitle color="text-white" className="mb-4">
-          {data.titulo}
+          {data.title}
         </SectionTitle>
       </motion.div>
 
@@ -65,7 +81,7 @@ export default function ContactForm() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <Text color="text-white/80" className="mb-12">
-          {data.descripcion}
+          {data.description}
         </Text>
       </motion.div>
 
@@ -76,16 +92,52 @@ export default function ContactForm() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        <input type="text" placeholder={data.placeholders.nombre} required className="p-4 rounded-md text-black" />
-        <input type="text" placeholder={data.placeholders.apellidos} required className="p-4 rounded-md text-black" />
-        <input type="email" placeholder={data.placeholders.email} required className="p-4 rounded-md text-black md:col-span-1" />
-        <input type="tel" placeholder={data.placeholders.telefono} required className="p-4 rounded-md text-black md:col-span-1" />
+        <input
+          type="text"
+          name="name"
+          placeholder={data.placeholders.name}
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="p-4 rounded-md text-black"
+        />
+        <input
+          type="text"
+          name="lastname"
+          placeholder={data.placeholders.lastname}
+          value={formData.lastname}
+          onChange={handleChange}
+          required
+          className="p-4 rounded-md text-black"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder={data.placeholders.email}
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="p-4 rounded-md text-black md:col-span-1"
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder={data.placeholders.phone}
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          className="p-4 rounded-md text-black md:col-span-1"
+        />
         <textarea
-          placeholder={data.placeholders.mensaje}
+          name="message"
+          placeholder={data.placeholders.message}
+          value={formData.message}
+          onChange={handleChange}
+          required
           className="p-4 rounded-md text-black md:col-span-2 min-h-[150px]"
         />
         <div className="md:col-span-2 flex justify-center mt-4">
-          <Button type="submit">{data.boton}</Button>
+          <Button type="submit">{data.button}</Button>
         </div>
       </motion.form>
 
@@ -95,8 +147,9 @@ export default function ContactForm() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          role="alert"
         >
-          {data.mensajeEnviado}
+          {data.successMessage}
         </motion.p>
       )}
     </section>

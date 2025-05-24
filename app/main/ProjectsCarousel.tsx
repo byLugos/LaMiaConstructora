@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -14,7 +15,7 @@ import SectionTitle from '@/app/components/ui/SectionTitle'
 type Proyecto = {
   title: string
   image: string
-  logo: string 
+  logo: string
   link: string
   buttonLabel: string
 }
@@ -74,12 +75,12 @@ export default function ProyectosCarousel() {
         >
           {proyectos.map((proyecto, index) => (
             <SwiperSlide key={index}>
-              {/* Usamos un enlace para navegar */}
-              <a
+              <Link
                 href={proyecto.link || '/alejandria'}
                 className="relative w-[90%] max-w-[560px] mx-auto rounded-[20px] overflow-hidden shadow-lg block"
                 onMouseEnter={() => setHoverIndex(index)}
                 onMouseLeave={() => setHoverIndex(null)}
+                aria-label={`Ver más sobre ${proyecto.title}`}
               >
                 <img
                   src={proyecto.image}
@@ -87,7 +88,6 @@ export default function ProyectosCarousel() {
                   className="w-full h-[400px] object-cover"
                 />
 
-                {/* Contenedor del logo con animación */}
                 <AnimatePresence>
                   {hoverIndex === index && (
                     <motion.div
@@ -105,7 +105,7 @@ export default function ProyectosCarousel() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </a>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

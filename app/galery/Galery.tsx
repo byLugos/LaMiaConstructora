@@ -5,9 +5,9 @@ import SectionTitle from '@/app/components/ui/SectionTitle'
 import { motion } from 'framer-motion'
 
 type GaleriaItem = {
-  titulo: string
-  imagen: string
-  categoria: string 
+  title: string
+  image: string
+  category: string 
 }
 
 export default function Galery() {
@@ -19,23 +19,19 @@ export default function Galery() {
     fetch('/data.json')
       .then(res => res.json())
       .then(data => {
-        setItems(data.galeria)
-        const categoriasUnicas = Array.from(new Set(data.galeria.map((i: GaleriaItem) => i.categoria)))
+        setItems(data.gallery)
+        const categoriasUnicas = Array.from(new Set(data.gallery.map((i: GaleriaItem) => i.category)))
         setActiveCategory(categoriasUnicas[0] || '')
-        setFilteredItems(data.galeria.filter((i: GaleriaItem) => i.categoria === categoriasUnicas[0]))
+        setFilteredItems(data.gallery.filter((i: GaleriaItem) => i.category === categoriasUnicas[0]))
       })
   }, [])
 
   const filterItems = (category: string) => {
     setActiveCategory(category)
-    setFilteredItems(items.filter(item => item.categoria === category))
+    setFilteredItems(items.filter(item => item.category === category))
   }
-
-  // Sólo categorías reales, sin 'all'
-  const categories = Array.from(new Set(items.map(item => item.categoria)))
-
+  const categories = Array.from(new Set(items.map(item => item.category)))
   if (!items.length) return null
-
   return (
     <section className="bg-white py-20 px-0 w-full">
       {/* El contenedor ocupa 100% ancho */}
@@ -71,13 +67,13 @@ export default function Galery() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <img
-                src={item.imagen}
-                alt={item.titulo}
+                src={item.image}
+                alt={item.title}
                 className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
                 style={{ display: 'block' }} 
               />
               <div className="absolute bottom-1 left-1 bg-black bg-opacity-60 px-1.5 py-0.5 rounded text-xs text-white select-none pointer-events-none">
-                {item.titulo}
+                {item.title}
               </div>
             </motion.div>
           ))}

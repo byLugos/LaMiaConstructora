@@ -3,12 +3,44 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt
+} from 'react-icons/fa'
 import Button from '@/app/components/ui/Button'
 import Subtitle from './ui/SectionSubtitle'
 
+type SocialItem = {
+  name: string
+  icon: string
+  url: string
+}
+
+type ContactInfo = {
+  phone: string
+  email: string
+  whatsapp?: string
+  address: string
+}
+
+type CompanyInfo = {
+  general: {
+    name: string
+    description: string
+    contact: ContactInfo
+  }
+  socials: SocialItem[]
+  legal: string
+}
+
 export default function Footer() {
-  const [data, setData] = useState<any>(null)
+  const [data, setData] = useState<CompanyInfo | null>(null)
 
   const { ref: topRef, inView: topInView } = useInView({ triggerOnce: true, threshold: 0.5 })
   const { ref: bottomRef, inView: bottomInView } = useInView({ triggerOnce: true, threshold: 0.5 })
@@ -16,7 +48,7 @@ export default function Footer() {
   useEffect(() => {
     fetch('/data.json')
       .then(res => res.json())
-      .then(data => setData(data.footer))
+      .then(data => setData(data.companyInfo))
   }, [])
 
   if (!data) return null
@@ -31,6 +63,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-white text-[#131A24]">
+      {/* Newsletter section: No definido en JSON, puedes agregar o eliminar */}
+      {/* Aquí dejo comentado por si decides añadir newsletter después */}
+      {/* 
       <motion.div
         ref={topRef}
         className="bg-[#F2F3F5] border-b border-gray-300"
@@ -44,14 +79,14 @@ export default function Footer() {
             animate={topInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <Subtitle>{data.newsletter.titulo}</Subtitle>
+            <Subtitle>NEWSLETTER</Subtitle>
             <div className="mt-6 flex flex-col sm:flex-row gap-4 items-center">
               <input
                 type="text"
-                placeholder={data.newsletter.placeholder}
+                placeholder="Ingresa tu correo"
                 className="px-4 py-3 rounded-md border border-gray-400 w-full sm:w-72 text-black"
               />
-              <Button>{data.newsletter.boton}</Button>
+              <Button>Suscribirse</Button>
             </div>
           </motion.div>
 
@@ -60,19 +95,28 @@ export default function Footer() {
             animate={topInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Subtitle>{data.sociales.titulo}</Subtitle>
+            <Subtitle>REDES SOCIALES</Subtitle>
             <div className="flex flex-wrap gap-6 mt-6 justify-center md:justify-start">
-              {data.sociales.items.map((item: any) => (
-                <div key={item.nombre} className="flex flex-col items-center text-center text-sm">
-                  <div className="text-2xl mb-1">{iconMap[item.icono]}</div>
-                  {item.nombre}
-                </div>
+              {data.socials.map(item => (
+                <a
+                  key={item.name}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center text-center text-sm"
+                  aria-label={item.name}
+                >
+                  <div className="text-2xl mb-1">{iconMap[item.icon] || <span />}</div>
+                  {item.name}
+                </a>
               ))}
             </div>
           </motion.div>
         </div>
       </motion.div>
+      */}
 
+      {/* Bottom info section */}
       <motion.div
         ref={bottomRef}
         className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
@@ -81,38 +125,43 @@ export default function Footer() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <div className="col-span-1">
-          <img src="/salida.webp" alt="Logo La Mía" className="h-20 mb-4" />
+          <img src="/logo.png" alt="Logo La Mía" className="h-20 mb-4" />
         </div>
         <div>
-          <h4 className="font-bold mb-4">LOREM IPSUM</h4>
-          <ul className="space-y-1 text-sm">
-            <li>Lorem</li>
-            <li>Ipsum Is Simply</li>
-            <li>Dummy</li>
-            <li>Text Of The</li>
-          </ul>
+          <h4 className="font-bold mb-4">{data.general.name}</h4>
+          <p className="text-sm">{data.general.description}</p>
         </div>
         <div>
-          <h4 className="font-bold mb-4">LOREM IPSUM</h4>
-          <ul className="space-y-1 text-sm">
-            <li>Lorem</li>
-            <li>Ipsum Is Simply</li>
-            <li>Dummy</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold mb-4">LOREM IPSUM</h4>
+          <h4 className="font-bold mb-4">Contacto</h4>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhone /> {data.contacto.telefono}
+              <FaPhone /> {data.general.contact.phone}
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> {data.contacto.correo}
+              <FaEnvelope /> {data.general.contact.email}
             </li>
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt /> {data.contacto.direccion}
+              <FaMapMarkerAlt /> {data.general.contact.address}
             </li>
           </ul>
+        </div>
+        <div>
+          <h4 className="font-bold mb-4">Redes Sociales</h4>
+          <div className="flex flex-wrap gap-6 mt-6 justify-start">
+            {data.socials.map(item => (
+              <a
+                key={item.name}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center text-center text-sm"
+                aria-label={item.name}
+              >
+                <div className="text-2xl mb-1">{iconMap[item.icon] || <span />}</div>
+                {item.name}
+              </a>
+            ))}
+          </div>
         </div>
       </motion.div>
 

@@ -8,16 +8,20 @@ import Text from '@/app/components/ui/Text'
 import Button from '@/app/components/ui/Button'
 
 type Info = {
-  titulo: string
-  descripcion: string
-  boton: {
-    texto: string
+  title: string
+  description: string
+  button: {
+    text: string
     link: string
   }
 }
 
 type CompanyInfoProps = {
-  dataPath: string; // Ruta o clave del JSON a consumir
+  dataPath: string 
+}
+
+function getNestedData(obj: any, path: string) {
+  return path.split('.').reduce((acc, key) => (acc ? acc[key] : null), obj)
 }
 
 export default function CompanyInfo({ dataPath }: CompanyInfoProps) {
@@ -31,7 +35,9 @@ export default function CompanyInfo({ dataPath }: CompanyInfoProps) {
   useEffect(() => {
     fetch('/data.json')
       .then((res) => res.json())
-      .then((data) => setInfo(data[dataPath])) // Usamos la prop dataPath para acceder a la clave del JSON
+      .then((data) => {
+        setInfo(getNestedData(data, dataPath))
+      })
   }, [dataPath])
 
   if (!info) return null
@@ -46,7 +52,7 @@ export default function CompanyInfo({ dataPath }: CompanyInfoProps) {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <SectionTitle className="mb-6">{info.titulo}</SectionTitle>
+        <SectionTitle className="mb-6">{info.title}</SectionTitle>
       </motion.div>
 
       <motion.div
@@ -55,7 +61,7 @@ export default function CompanyInfo({ dataPath }: CompanyInfoProps) {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="max-w-3xl mx-auto mb-8"
       >
-        <Text className='mb-4'>{info.descripcion}</Text>
+        <Text className="mb-4">{info.description}</Text>
       </motion.div>
 
       <motion.div
@@ -63,7 +69,7 @@ export default function CompanyInfo({ dataPath }: CompanyInfoProps) {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        <Button href={info.boton.link}>{info.boton.texto}</Button>
+        <Button href={info.button.link}>{info.button.text}</Button>
       </motion.div>
     </section>
   )

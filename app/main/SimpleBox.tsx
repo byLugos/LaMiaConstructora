@@ -10,19 +10,20 @@ type SimpleBoxData = {
   backgroundImage: string
   title: string
   buttonLabel: string
+  buttonLink?: string
 }
 
 export default function SimpleBox() {
   const [data, setData] = useState<SimpleBoxData | null>(null)
   const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.5, 
+    triggerOnce: true,
+    threshold: 0.5,
   })
 
   useEffect(() => {
     fetch('/data.json')
       .then(res => res.json())
-      .then(data => setData(data.simpleBox)) 
+      .then(data => setData(data.simpleBox))
   }, [])
 
   if (!data) return null
@@ -51,9 +52,7 @@ export default function SimpleBox() {
             ease: 'easeInOut',
           }}
         >
-          <SectionTitle className="text-[#454181] mb-6">
-            {data.title}
-          </SectionTitle>
+          <SectionTitle className="text-[#454181] mb-6">{data.title}</SectionTitle>
         </motion.div>
 
         <motion.div
@@ -65,7 +64,7 @@ export default function SimpleBox() {
             ease: 'easeInOut',
           }}
         >
-          <Button bgColor="bg-[#454181]" textColor="text-white">
+          <Button bgColor="bg-[#454181]" textColor="text-white" href={data.buttonLink ?? '#'}>
             {data.buttonLabel}
           </Button>
         </motion.div>

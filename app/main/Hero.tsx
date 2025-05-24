@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Title from "@/app/components/ui/Title";
@@ -9,8 +10,8 @@ import Button from "@/app/components/ui/Button";
 type Slide = {
   title: string;
   logo: string;
-  logoWidth?: string;
-  logoHeight?: string;
+  logoWidth: string;
+  logoHeight: string;
   image: string;
   link: string;
   buttonLabel: string;
@@ -37,18 +38,11 @@ export default function HeroCarousel() {
 
   if (!slides.length) return null;
 
-  const {
-    title,
-    logo,
-    logoWidth,
-    logoHeight,
-    image,
-    link,
-    buttonLabel,
-  } = slides[current];
+  const { title, logo, logoWidth, logoHeight, image, link, buttonLabel } =
+    slides[current];
 
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden bg-white px-4 ">
+    <section className="relative h-[85vh] w-full overflow-hidden bg-white px-4">
       <AnimatePresence mode="wait">
         <>
           <motion.div
@@ -95,14 +89,14 @@ export default function HeroCarousel() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <Button
-              href={link}
-              bgColor="bg-[#454181]"
-              textColor="text-white"
-              className="flex items-center gap-2 rounded-full max-w-max"
-            >
-              {buttonLabel} <span className="text-xl">→</span>
-            </Button>
+            <Link href={link} passHref legacyBehavior>
+              <Button
+                textColor="text-white"
+                className={`flex items-center gap-2 rounded-full max-w-max cursor-pointer transition-colors duration-500 ease-in-out hover:bg-[#b1d07fff]`}
+              >
+                {buttonLabel} <span className="text-xl">→</span>
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
 

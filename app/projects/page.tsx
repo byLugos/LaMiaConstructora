@@ -11,7 +11,7 @@ export default function Galery() {
       <HeroSmall
       title='NUESTROS PROYECTOS'
       image='/fondoHero_dos.webp'/>
-      <CompanyInfo dataPath='nosotrosPromociones'/>
+      <CompanyInfo dataPath='promotions'/>
       <Cards/>
       <WhyUs/>
       <Footer/>

@@ -6,9 +6,9 @@ import SectionSubtitle from '@/app/components/ui/SectionSubtitle'
 import Text from '@/app/components/ui/Text'
 
 type Empleado = {
-  nombre: string
-  imagen: string
-  descripcion: string
+  name: string
+  image: string
+  description: string
 }
 
 export default function Team() {
@@ -17,7 +17,7 @@ export default function Team() {
   useEffect(() => {
     fetch('/data.json')
       .then((res) => res.json())
-      .then((data) => setEmpleados(data.empleados))
+      .then((data) => setEmpleados(data.team))
   }, [])
 
   if (!empleados.length) return null
@@ -33,12 +33,12 @@ export default function Team() {
             className="bg-[#F8F8F8] p-6 rounded-lg shadow-lg transform hover:scale-105 duration-300 ease-in-out"
           >
             <img
-              src={empleado.imagen}
-              alt={empleado.nombre}
+              src={empleado.image}
+              alt={empleado.name}
               className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
             />
-            <SectionSubtitle className="text-center text-[#454181]">{empleado.nombre}</SectionSubtitle>
-            <Text className="text-center text-sm text-[#454181]">{empleado.descripcion}</Text>
+            <SectionSubtitle className="text-center text-[#454181]">{empleado.name}</SectionSubtitle>
+            <Text className="text-center text-sm text-[#454181]">{empleado.description}</Text>
           </div>
         ))}
       </div>

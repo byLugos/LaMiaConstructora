@@ -1,334 +1,300 @@
 {
-  "_barra_navegacion": "Esta es la información de la barra de navegación",
-  "nombre": "La Mía Constructora",
-  "contacto": {
-    "whatsapp": "+123.456.78910"
-  },
-  "primera_seccion": "NO CAMBIAR LAS RUTAS A LAS IMAGENES SIN CONSULTA PREVIA (se pueden cambiar las descripciones de los proyectos)",
-  "carousel": [
-    {
-      "title": "Alejandría",
-      "logo": "/alejandria_logo.webp",
-      "logoWidth": "w-42",
-      "logoHeight": "h-30",
-      "image": "/alejandria_alt.webp",
-      "link": "/alejandria",
-      "buttonLabel": "Ver Más"
-    },
-    {
-      "title": "La Colina 1",
-      "logo": "/colina_logo.webp",
-      "logoWidth": "w-72",
-      "logoHeight": "h-54",
-      "image": "/colina_altdos.webp",
-      "link": "/colina",
-      "buttonLabel": "Conocer Proyecto"
-    }
-  ],
-  "segunda_seccion": "SECCIÓN DONDE ESTÁ INFORMACIÓN BREVE DE LA CONSTRUCTORA",
   "companyInfo": {
-    "titulo": "CONSTRUCTORA LA MÍA",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-    "boton": {
-      "texto": "Conoce más",
-      "link": "/ourteam"
-    }
-  },
-  "formulario_seccion": "SECCIÓN DONDE ESTÁ EL FORMULARIO PARA ENVIARLES UN CORREO",
-  "formularioContacto": {
-    "titulo": "ENVÍANOS UN MENSAJE",
-    "descripcion": "Deja tus datos para contactarte por correo electrónico ó por celular.",
-    "placeholders": {
-      "nombre": "Nombre*",
-      "apellidos": "Apellidos*",
-      "email": "Dirección de Correo Electrónico*",
-      "telefono": "Número de Celular*",
-      "mensaje": "Déjanos un mensaje"
+    "general": {
+      "title": "La Mía Constructora",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+      "contact": {
+        "phoneOne": "311 311 3111",
+        "phoneTwo":"312 312 3222",
+        "phoneThree":"313 313 3333",
+        "email": "info@loremipsum.com",
+        "whatsapp": "+123.456.78910",
+        "address": "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting"
+      },
+      "button": {
+        "link": "/ourteam",
+        "text": "Conoce más de nosotros"
+      }
     },
-    "boton": "Enviar",
-    "mensajeEnviado": "¡Gracias por tu mensaje!"
-  },
-  "footer_seccion": "SECCIÓN DE FOOTER, SE PUEDE ACTUALIZAR INFO SIN PROBLEMA",
-  "footer": {
-    "newsletter": {
-      "titulo": "LOREM IPSUM IS SIMPLY DO",
-      "placeholder": "Lorem Ips",
-      "boton": "Contáctanos"
+    "aboutUs":{
+      "titleOne":"Info básica acá",
+      "titleTwo":"Otra info acá",
+      "descriptionOne":"Eu eiusmod sunt non sunt cupidatat qui eiusmod elit. Est ad ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
+      "descriptionTwo":"ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
+      "button":{
+        "link":"/ourteam",
+        "text":"Conócenos!"
+      }
     },
-    "sociales": {
-      "titulo": "ENCUÉNTRANOS EN REDES SOCIALES",
-      "items": [
-        { "nombre": "Facebook", "icono": "facebook" },
-        { "nombre": "Twitter", "icono": "twitter" },
-        { "nombre": "Instagram", "icono": "instagram" },
-        { "nombre": "LinkedIn", "icono": "linkedin" },
-        { "nombre": "YouTube", "icono": "youtube" }
-      ]
-    },
-    "contacto": {
-      "telefono": "123.456.7980",
-      "correo": "info@loremipsum.com",
-      "direccion": "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting"
-    },
+    "socials": [
+      {
+        "name": "Facebook",
+        "icon": "facebook",
+        "url": "https://facebook.com/la_mia"
+      },
+      {
+        "name": "Twitter",
+        "icon": "twitter",
+        "url": "https://twitter.com/la_mia"
+      },
+      {
+        "name": "Instagram",
+        "icon": "instagram",
+        "url": "https://instagram.com/la_mia"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin",
+        "url": "https://linkedin.com/company/la_mia"
+      },
+      {
+        "name": "YouTube",
+        "icon": "youtube",
+        "url": "https://youtube.com/la_mia"
+      }
+    ],
     "legal": "Lorem Ipsum is simply dummy text of the printing and..."
   },
-  "galeria": [
+
+  "navigation": {
+    "items": [
+      { "label": "Inicio", "link": "/" },
+      { "label": "Proyectos", "link": "/projects" },
+      { "label": "Galeria", "link": "/galery" },
+      { "label": "Nosotros", "link": "/ourteam" }
+    ],
+    "note": "NO CAMBIAR LAS RUTAS A LAS IMÁGENES SIN CONSULTA PREVIA..."
+  },
+
+  "carousel": [
     {
-      "titulo": "Zona común",
-      "imagen": "/zonacomun.webp",
-      "categoria": "Alejandria"
+      "key": "alejandria",
+      "title": "Alejandría",
+      "logo": "/alejandria_logo.webp",
+      "logoSize": { "width": "w-60", "height": "h-60" },
+      "image": "/alejandria_alt.webp",
+      "link": "/alejandria",
+      "buttonLabel": "Ver Más",
+      "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6"
     },
     {
-      "titulo": "Vista cenital",
-      "imagen": "/vistacenital.webp",
-      "categoria": "Alejandria"
-    },
-    {
-      "titulo": "Portería",
-      "imagen": "/porteria.webp",
-      "categoria": "Alejandria"
-    },
-    {
-      "titulo": "Parqueaderos",
-      "imagen": "/parqueadero.webp",
-      "categoria": "Alejandria"
-    },
-    {
-      "titulo": "Vista lateral izquierda",
-      "imagen": "/lateralizquierdo.webp",
-      "categoria": "Alejandria"
-    },
-    {
-      "titulo": "Vista lateral derecha",
-      "imagen": "/lateralderecho.webp",
-      "categoria": "Alejandria"
-    },
-    {
-      "titulo": "Vista trasera",
-      "imagen": "/trasera.webp",
-      "categoria": "Alejandria"
-    },
-    {
-      "titulo": "Vista frontal",
-      "imagen": "/frontaluno.webp",
-      "categoria": "Alejandria"
-    },
-    {
-      "titulo": "Vista general",
-      "imagen": "/vista_general.webp",
-      "categoria": "La Colina"
-    },
-    {
-      "titulo": "Vista externa",
-      "imagen": "/externa.webp",
-      "categoria": "La Colina"
-    },
-    {
-      "titulo": "Vista externa dos",
-      "imagen": "/externa_dos.webp",
-      "categoria": "La Colina"
-    },
-    {
-      "titulo": "Parque de niños",
-      "imagen": "/parque.webp",
-      "categoria": "La Colina"
-    },
-    {
-      "titulo": "Parque central",
-      "imagen": "/fuente.webp",
-      "categoria": "La Colina"
-    },
-    {
-      "titulo": "Parque central dos",
-      "imagen": "/fuente_dos.webp",
-      "categoria": "La Colina"
-    },
-    {
-      "titulo": "Parque central tres",
-      "imagen": "/fuente_tres.webp",
-      "categoria": "La Colina"
-    },
-    {
-      "titulo": "Vista balcón",
-      "imagen": "/balcon.webp",
-      "categoria": "La Colina"
+      "key": "colina",
+      "title": "La Colina 1",
+      "logo": "/colina_logo.webp",
+      "logoSize": { "width": "w-40", "height": "h-70" }, 
+      "image": "/colina_altdos.webp",
+      "link": "/colina",
+      "buttonLabel": "Conocer Proyecto",
+      "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6"
     }
   ],
   "simpleBox": {
     "backgroundImage": "/avanceObra.webp",
     "title": "Construyendo el futuro",
-    "buttonLabel": "Link a vídeo"
+    "buttonLabel": "Link a vídeo",
+    "buttonLink": "/videos"
   },
 
-  "miniCarousel": [
-    {
-      "title": "Proyecto Alejandría",
-      "image": "/lateralizquierdo.webp",
-      "link": "https://www.youtube.com/watch?v=1"
-    },
-    {
-      "title": "Proyecto La Colina",
-      "image": "/colina_alt.webp",
-      "link": "https://www.youtube.com/watch?v=2"
-    }
-  ],
-  "nosotrosPromociones": {
-    "titulo": "CONOCE NUESTRAS PROMOCIONES",
-    "descripcion": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry",
-    "boton": {
-      "texto": "Conoce más",
-      "link": "#quienes"
-    }
-  },
-  "whyus": {
-    "titulo": "¿POR QUÉ NOSOTROS?",
-    "titulodos": "XDasfasfsa",
-    "descripcion": "Lorem Igadgasdgasdgj3282341 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry",
-    "boton": {
-      "texto": "Conoce más",
-      "link": "#quienes"
-    }
-  },
-  "projectos": [
-    {
-      "title": "La Colina",
-      "image": "/colina_alt.webp",
-      "url": "/colina",
-      "features": [
-        {
-          "title": "Número de Habitaciones",
-          "value": "3"
-        },
-        {
-          "title": "Metros Totales",
-          "value": "80 m²"
-        },
-        {
-          "title": "Cocina Integral",
-          "value": "Sí"
-        }
-      ]
-    },
-    {
-      "title": "Alejandría",
-      "image": "/alejandria_alt.webp",
-      "url": "/alejandria",
-      "features": [
-        {
-          "title": "Número de Habitaciones",
-          "value": "2"
-        },
-        {
-          "title": "Metros Totales",
-          "value": "65 m²"
-        },
-        {
-          "title": "Cocina Integral",
-          "value": "Sí"
-        }
-      ]
-    }
-  ],
-
-  "empleados": [
-    {
-      "nombre": "Juan Pérez",
-      "imagen": "/groupDos.webp",
-      "descripcion": "Juan es el gerente de operaciones, apasionado por la tecnología y la gestión de equipos."
-    },
-    {
-      "nombre": "Ana García",
-      "imagen": "/groupDos.webp",
-      "descripcion": "Ana es la encargada de marketing, con un gran enfoque en redes sociales y estrategia digital."
-    },
-    {
-      "nombre": "Carlos López",
-      "imagen": "/groupDos.webp",
-      "descripcion": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
-    },
-    {
-      "nombre": "Ian Rodriguez",
-      "imagen": "/xd.jpg",
-      "descripcion": "Mateo es el director de programación, polivalente"
-    },
-    {
-      "nombre": "Alma Marcela Gozo",
-      "imagen": "/groupDos.webp",
-      "descripcion": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
-    }
-  ],
-  "project": {
+  "projects": {
     "alejandria": {
+      "url": "/alejandria",
       "title": "Alejandría",
       "location": "Sogamoso / Norte",
       "logo": "/alejandria_logo.webp",
       "status": "En proceso",
       "description": "Breve párrafo descriptivo del proyecto...",
       "images": [
-        "/frontalUno.webp",
         "/lateralizquierdo.webp",
+        "/frontalUno.webp",
         "/porteria.webp",
         "/trasera.webp",
         "/vistacenital.webp"
-      ]
+      ],
+      "technicalDetails": {
+        "units": [
+          {
+            "unitTitle": "Apartamento Tipo A",
+            "planos": ["/isoalejandria.webp", "/isoalejandriados.webp"],
+            "features": [
+              { "title": "Metros construidos", "value": "75 m²" },
+              { "title": "Habitaciones", "value": "3" },
+              { "title": "Baños", "value": "2" },
+              { "title": "Parqueadero", "value": "1" }
+            ],
+            "description": "Apartamento espacioso con excelente iluminación natural...",
+            "icons": [
+              "Zona de ropa",
+              "Cocina",
+              "Bañera",
+              "Parqueadero",
+              "Sala",
+              "Entrada",
+              "Baños",
+              "Habitaciones"
+            ]
+          }
+        ]
+      }
     },
     "colina": {
+      "url": "/colina",
       "title": "La Colina",
       "location": "Tunja / Sur",
       "logo": "/colina_logo.webp",
       "status": "Finalizado",
       "description": "Descripción para el proyecto La Colina...",
-      "images": [
-        "/balcon.webp",
-        "/fuente_tres.webp",
-        "/fuente_dos.webp"
-      ]
+      "images": ["/balcon.webp", "/fuente_tres.webp", "/fuente_dos.webp"],
+      "technicalDetails": {
+        "units": [
+          {
+            "unitTitle": "Apartamento Tipo A",
+            "planos": ["/isocolina.webp", "/isocolinados.webp"],
+            "features": [
+              { "title": "Metros construidos", "value": "70 m²" },
+              { "title": "Habitaciones", "value": "3" },
+              { "title": "Baños", "value": "2" }
+            ],
+            "description": "Apartamento moderno en La Colina...",
+            "icons": ["Zona de ropa", "Cocina", "Bañera"]
+          }
+        ]
+      }
     }
   },
-  "projectTechnicalDetails": {
-    "alejandria": {
-      "units": [
-        {
-          "unitTitle": "Apartamento Tipo A",
-          "planos": ["/isoalejandria.webp", "/isoalejandriados.webp"],
-          "features": [
-            { "title": "Metros construidos", "value": "75 m²" },
-            { "title": "Habitaciones", "value": "3" },
-            { "title": "Baños", "value": "2" },
-            { "title": "Parqueadero", "value": "1" }
-          ],
-          "description": "Apartamento espacioso con excelente iluminación natural... mento espacioso con excelente iluminación nmento espacioso con excelente iluminación nmento espacioso con excelente iluminación nmento espacioso con excelente iluminación n",
-          "icons": [
-            { "title": "Zona de ropa" },
-            { "title": "Cocina" },
-            { "title": "Bañera" },
-            { "title": "Parqueadero" },
-            { "title": "Sala" },
-            { "title": "Entrada" },
-            { "title": "Baños" },
-            { "title": "Habitaciones" }
-          ]
-        }
-      ]
+
+  "gallery": [
+    {
+      "title": "Zona común",
+      "image": "/zonacomun.webp",
+      "category": "Alejandría"
     },
-    "colina": {
-      "units": [
-        {
-          "unitTitle": "Apartamento Tipo A",
-          "planos": ["/isocolina.webp","/isocolinados.webp"],
-          "features": [
-            { "title": "Metros construidos", "value": "70 m²" },
-            { "title": "Habitaciones", "value": "3" },
-            { "title": "Baños", "value": "2" }
-          ],
-          "description": "Apartamento moderno en La Colina...",
-          "icons": [
-            { "title": "Zona de ropa" },
-            { "title": "Cocina" },
-            { "title": "Bañera" }
-          ]
-        }
-      ]
+    {
+      "title": "Vista cenital",
+      "image": "/vistacenital.webp",
+      "category": "Alejandría"
+    },
+    {
+      "title": "Portería",
+      "image": "/porteria.webp",
+      "category": "Alejandría"
+    },
+    {
+      "title": "Parqueaderos",
+      "image": "/parqueadero.webp",
+      "category": "Alejandría"
+    },
+    {
+      "title": "Vista lateral izquierda",
+      "image": "/lateralizquierdo.webp",
+      "category": "Alejandría"
+    },
+    {
+      "title": "Vista lateral derecha",
+      "image": "/lateralderecho.webp",
+      "category": "Alejandría"
+    },
+    {
+      "title": "Vista trasera",
+      "image": "/trasera.webp",
+      "category": "Alejandría"
+    },
+    {
+      "title": "Vista frontal",
+      "image": "/frontaluno.webp",
+      "category": "Alejandría"
+    },
+    {
+      "title": "Vista general",
+      "image": "/vista_general.webp",
+      "category": "La Colina"
+    },
+    {
+      "title": "Vista externa",
+      "image": "/externa.webp",
+      "category": "La Colina"
+    },
+    {
+      "title": "Vista externa dos",
+      "image": "/externa_dos.webp",
+      "category": "La Colina"
+    },
+    {
+      "title": "Parque de niños",
+      "image": "/parque.webp",
+      "category": "La Colina"
+    },
+    {
+      "title": "Parque central",
+      "image": "/fuente.webp",
+      "category": "La Colina"
+    },
+    {
+      "title": "Parque central dos",
+      "image": "/fuente_dos.webp",
+      "category": "La Colina"
+    },
+    {
+      "title": "Parque central tres",
+      "image": "/fuente_tres.webp",
+      "category": "La Colina"
+    },
+    { "title": "Vista balcón", "image": "/balcon.webp", "category": "La Colina" }
+  ],
+
+  "forms": {
+    "contact": {
+      "title": "ENVÍANOS UN MENSAJE",
+      "description": "Deja tus datos para contactarte por correo electrónico o por celular.",
+      "placeholders": {
+        "name": "Nombre*",
+        "lastname": "Apellidos*",
+        "email": "Correo Electrónico*",
+        "phone": "Número de Celular*",
+        "message": "Déjanos un mensaje"
+      },
+      "button": "Enviar",
+      "successMessage": "¡Gracias por tu mensaje!"
     }
+  },
+
+  "team": [
+    {
+      "name": "Juan Pérez",
+      "image": "/groupDos.webp",
+      "description": "Juan es el gerente de operaciones, apasionado por la tecnología y la gestión de equipos."
+    },
+    {
+      "name": "Ana García",
+      "image": "/groupDos.webp",
+      "description": "Ana es la encargada de marketing, con un gran enfoque en redes sociales y estrategia digital."
+    },
+    {
+      "name": "Carlos López",
+      "image": "/groupDos.webp",
+      "description": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
+    },
+    {
+      "name": "Ian Rodriguez",
+      "image": "/xd.jpg",
+      "description": "Mateo es el director de programación, polivalente."
+    },
+    {
+      "name": "Alma Marcela Gozo",
+      "image": "/groupDos.webp",
+      "description": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
+    }
+  ],
+
+  "promotions": {
+    "title": "CONOCE NUESTRAS PROMOCIONES",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+    "button": { "text": "Conoce más", "link": "/promotions" }
+  },
+
+  "whyUs": {
+    "title": "¿POR QUÉ NOSOTROS?",
+    "subtitle": "XDasfasfsa",
+    "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+    "button": { "text": "Conoce más", "link": "#quienes" }
   }
 }
