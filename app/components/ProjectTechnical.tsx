@@ -9,7 +9,16 @@ import 'swiper/css'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css/pagination'
 
-import { FaBath, FaBed, FaTshirt, FaUtensils, FaShower, FaCar, FaCouch, FaDoorOpen } from 'react-icons/fa'
+import {
+  FaBath,
+  FaBed,
+  FaTshirt,
+  FaUtensils,
+  FaShower,
+  FaCar,
+  FaCouch,
+  FaDoorOpen,
+} from 'react-icons/fa'
 
 type TechnicalFeature = {
   title: string
@@ -21,24 +30,22 @@ type TechnicalUnit = {
   planos: string[]
   features: TechnicalFeature[]
   description: string
-  icons: { title: string }[]
+  icons: string[]
 }
 
 type ProjectTechnicalDetailsData = {
-  [projectName: string]: {
-    units: TechnicalUnit[]
-  }
+  units: TechnicalUnit[]
 }
 
 const iconMap: { [key: string]: React.ReactElement } = {
-  'Baños': <FaBath className="w-6 h-6 text-[#454181]" />,
-  'Habitaciones': <FaBed className="w-6 h-6 text-[#454181]" />,
+  Baños: <FaBath className="w-6 h-6 text-[#454181]" />,
+  Habitaciones: <FaBed className="w-6 h-6 text-[#454181]" />,
   'Zona de ropa': <FaTshirt className="w-6 h-6 text-[#454181]" />,
-  'Cocina': <FaUtensils className="w-6 h-6 text-[#454181]" />,
-  'Bañera': <FaShower className="w-6 h-6 text-[#454181]" />,
-  'Parqueadero': <FaCar className="w-6 h-6 text-[#454181]" />,
-  'Sala': <FaCouch className="w-6 h-6 text-[#454181]" />,
-  'Entrada': <FaDoorOpen className="w-6 h-6 text-[#454181]" />,
+  Cocina: <FaUtensils className="w-6 h-6 text-[#454181]" />,
+  Bañera: <FaShower className="w-6 h-6 text-[#454181]" />,
+  Parqueadero: <FaCar className="w-6 h-6 text-[#454181]" />,
+  Sala: <FaCouch className="w-6 h-6 text-[#454181]" />,
+  Entrada: <FaDoorOpen className="w-6 h-6 text-[#454181]" />,
 }
 
 interface Props {
@@ -46,18 +53,24 @@ interface Props {
   unitIndex?: number
 }
 
-export default function ProjectTechnicalDetails({ projectName, unitIndex = 0 }: Props) {
+export default function ProjectTechnicalDetails({
+  projectName,
+  unitIndex = 0,
+}: Props) {
   const [data, setData] = useState<ProjectTechnicalDetailsData | null>(null)
 
   useEffect(() => {
     fetch('/data.json')
-      .then(res => res.json())
-      .then(json => setData(json.projectTechnicalDetails))
-  }, [])
+      .then((res) => res.json())
+      .then((json) => {
+        const technicalDetails = json.projects?.[projectName]?.technicalDetails
+        setData(technicalDetails ?? null)
+      })
+  }, [projectName])
 
-  if (!data || !data[projectName] || !data[projectName].units[unitIndex]) return null
+  if (!data || !data.units || !data.units[unitIndex]) return null
 
-  const unit = data[projectName].units[unitIndex]
+  const unit = data.units[unitIndex]
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 bg-white">
@@ -86,9 +99,14 @@ export default function ProjectTechnicalDetails({ projectName, unitIndex = 0 }: 
 
         <ul className="flex flex-wrap gap-6 mb-6">
           {unit.features.map((feature, i) => (
-            <li key={i} className="flex items-center gap-2 bg-[#F8F8F8] p-3 rounded-md shadow w-50">
-              <Text className="font-semibold text-[#454181]">{feature.title}:</Text>
-              <Text >{feature.value}</Text>
+            <li
+              key={i}
+              className="flex items-center gap-2 bg-[#F8F8F8] p-3 rounded-md shadow w-50"
+            >
+              <Text className="font-semibold text-[#454181]">
+                {feature.title}:
+              </Text>
+              <Text>{feature.value}</Text>
             </li>
           ))}
         </ul>
@@ -96,10 +114,13 @@ export default function ProjectTechnicalDetails({ projectName, unitIndex = 0 }: 
         <Text className="mb-8">{unit.description}</Text>
 
         <ul className="grid grid-cols-4 gap-6">
-          {unit.icons.map((iconItem, i) => (
-            <li key={i} className="flex flex-col items-center text-[#454181]">
-              {iconMap[iconItem.title] || <span className="w-4 h-6" />}
-              <Text className="text-sm text-[#454181]">{iconItem.title}</Text>
+          {unit.icons.map((iconTitle, i) => (
+            <li
+              key={i}
+              className="flex flex-col items-center text-[#454181]"
+            >
+              {iconMap[iconTitle] || <span className="w-4 h-6" />}
+              <Text className="text-sm text-[#454181]">{iconTitle}</Text>
             </li>
           ))}
         </ul>

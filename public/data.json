@@ -296,5 +296,11 @@
     "subtitle": "XDasfasfsa",
     "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
     "button": { "text": "Conoce más", "link": "#quienes" }
+  },
+  "promotionsNow": {
+    "title": "Título de la promoción",
+    "description": "Descripción breve para el modal.",
+    "imageUrl": "/prueba.jpg"
   }
+
 }

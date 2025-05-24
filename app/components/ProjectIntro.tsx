@@ -11,12 +11,19 @@ import { Pagination } from 'swiper/modules'
 import 'swiper/css/pagination'
 
 type ProjectData = {
+  url: string
   title: string
   location: string
   status: string
   logo: string
   description: string
-  images: string[]
+  // ya no se usa images aquí
+}
+
+type GalleryItem = {
+  title: string
+  image: string
+  category: string
 }
 
 type ProjectsData = {
@@ -25,7 +32,7 @@ type ProjectsData = {
 
 interface Props {
   projectName: string
-  logoWidth?: string  
+  logoWidth?: string
   logoHeight?: string
 }
 
@@ -35,18 +42,26 @@ export default function ProjectIntroSection({
   logoHeight = '150px',
 }: Props) {
   const [projects, setProjects] = useState<ProjectsData | null>(null)
+  const [gallery, setGallery] = useState<GalleryItem[]>([])
 
   useEffect(() => {
     fetch('/data.json')
       .then(res => res.json())
-      .then(json => setProjects(json.project))
+      .then(json => {
+        setProjects(json.projects)
+        setGallery(json.gallery)
+      })
   }, [])
 
   if (!projects) return null
 
   const project = projects[projectName]
-
   if (!project) return <p>Proyecto no encontrado.</p>
+
+  // Filtrar imágenes de la galería por categoría igual al título del proyecto
+  const projectImages = gallery.filter(
+    (item) => item.category.toLowerCase() === project.title.toLowerCase()
+  )
 
   return (
     <section className="w-full mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 bg-white">
@@ -70,10 +85,10 @@ export default function ProjectIntroSection({
           spaceBetween={10}
           slidesPerView={1}
         >
-          {project.images.map((img, i) => (
+          {projectImages.map((img, i) => (
             <SwiperSlide key={i}>
               <img
-                src={img}
+                src={img.image}
                 alt={`${project.title} image ${i + 1}`}
                 className="w-full h-80 object-cover rounded-lg"
               />
