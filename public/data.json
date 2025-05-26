@@ -70,9 +70,9 @@
     {
       "key": "alejandria",
       "title": "Alejandría",
-      "logo": "/alejandria_logo.webp",
+      "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/alejandria_logo_zblmsi.webp",
       "logoSize": { "width": "w-60", "height": "h-60" },
-      "image": "/alejandria_alt.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/alejandria_alt_q5oakn.webp",
       "link": "/alejandria",
       "buttonLabel": "Ver Más",
       "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6"
@@ -80,16 +80,16 @@
     {
       "key": "colina",
       "title": "La Colina 1",
-      "logo": "/colina_logo.webp",
+      "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298095/colina_logo_qyabwb.webp",
       "logoSize": { "width": "w-40", "height": "h-70" }, 
-      "image": "/colina_altdos.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298096/colina_altdos_ir0w7a.webp",
       "link": "/colina",
       "buttonLabel": "Conocer Proyecto",
       "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6"
     }
   ],
   "simpleBox": {
-    "backgroundImage": "/avanceObra.webp",
+    "backgroundImage": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298096/colina_altdos_ir0w7a.webp",
     "title": "Construyendo el futuro",
     "buttonLabel": "Link a vídeo",
     "buttonLink": "/videos"
@@ -100,21 +100,21 @@
       "url": "/alejandria",
       "title": "Alejandría",
       "location": "Sogamoso / Norte",
-      "logo": "/alejandria_logo.webp",
+      "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/alejandria_logo_zblmsi.webp",
       "status": "En proceso",
       "description": "Breve párrafo descriptivo del proyecto...",
       "images": [
-        "/lateralizquierdo.webp",
-        "/frontalUno.webp",
-        "/porteria.webp",
-        "/trasera.webp",
-        "/vistacenital.webp"
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298103/lateralizquierdo_echeb6.webp",
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298099/frontaluno_bvpgai.webp",
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/porteria_elmcxb.webp",
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/trasera_m11wxk.webp",
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/vistacenital_nimdbd.webp"
       ],
       "technicalDetails": {
         "units": [
           {
             "unitTitle": "Apartamento Tipo A",
-            "planos": ["/isoalejandria.webp", "/isoalejandriados.webp"],
+            "planos": ["https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298101/isoalejandriados_hkeijs.webp"],
             "features": [
               { "title": "Metros construidos", "value": "75 m²" },
               { "title": "Habitaciones", "value": "3" },
@@ -140,15 +140,15 @@
       "url": "/colina",
       "title": "La Colina",
       "location": "Tunja / Sur",
-      "logo": "/colina_logo.webp",
+      "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298095/colina_logo_qyabwb.webp",
       "status": "Finalizado",
       "description": "Descripción para el proyecto La Colina...",
-      "images": ["/balcon.webp", "/fuente_tres.webp", "/fuente_dos.webp"],
+      "images": ["https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298094/balcon_tmijeo.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298100/fuente_tres_sen8da.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298099/fuente_dos_jiv8dd.webp"],
       "technicalDetails": {
         "units": [
           {
             "unitTitle": "Apartamento Tipo A",
-            "planos": ["/isocolina.webp", "/isocolinados.webp"],
+            "planos": ["https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolina_y1d3ul.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolinados_xhbb4b.webp"],
             "features": [
               { "title": "Metros construidos", "value": "70 m²" },
               { "title": "Habitaciones", "value": "3" },
@@ -165,80 +165,80 @@
   "gallery": [
     {
       "title": "Zona común",
-      "image": "/zonacomun.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298094/zonacomun_ep6phn.webp",
       "category": "Alejandría"
     },
     {
       "title": "Vista cenital",
-      "image": "/vistacenital.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/vistacenital_nimdbd.webp",
       "category": "Alejandría"
     },
     {
       "title": "Portería",
-      "image": "/porteria.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/porteria_elmcxb.webp",
       "category": "Alejandría"
     },
     {
       "title": "Parqueaderos",
-      "image": "/parqueadero.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298106/parqueadero_yrzo8a.webp",
       "category": "Alejandría"
     },
     {
       "title": "Vista lateral izquierda",
-      "image": "/lateralizquierdo.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298103/lateralizquierdo_echeb6.webp",
       "category": "Alejandría"
     },
     {
       "title": "Vista lateral derecha",
-      "image": "/lateralderecho.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298103/lateralderecho_mshem3.webp",
       "category": "Alejandría"
     },
     {
       "title": "Vista trasera",
-      "image": "/trasera.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/trasera_m11wxk.webp",
       "category": "Alejandría"
     },
     {
       "title": "Vista frontal",
-      "image": "/frontaluno.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298099/frontaluno_bvpgai.webp",
       "category": "Alejandría"
     },
     {
       "title": "Vista general",
-      "image": "/vista_general.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/vista_general_ig2ml5.webp",
       "category": "La Colina"
     },
     {
       "title": "Vista externa",
-      "image": "/externa.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298097/externa_sa41rt.webp",
       "category": "La Colina"
     },
     {
       "title": "Vista externa dos",
-      "image": "/externa_dos.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298098/externa_dos_cge6uw.webp",
       "category": "La Colina"
     },
     {
       "title": "Parque de niños",
-      "image": "/parque.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298105/parque_szvgvl.webp",
       "category": "La Colina"
     },
     {
       "title": "Parque central",
-      "image": "/fuente.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298099/fuente_jwgick.webp",
       "category": "La Colina"
     },
     {
       "title": "Parque central dos",
-      "image": "/fuente_dos.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298099/fuente_dos_jiv8dd.webp",
       "category": "La Colina"
     },
     {
       "title": "Parque central tres",
-      "image": "/fuente_tres.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298100/fuente_tres_sen8da.webp",
       "category": "La Colina"
     },
-    { "title": "Vista balcón", "image": "/balcon.webp", "category": "La Colina" }
+    { "title": "Vista balcón", "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/balcon_tmijeo.webp", "category": "La Colina" }
   ],
 
   "forms": {
@@ -260,27 +260,27 @@
   "team": [
     {
       "name": "Juan Pérez",
-      "image": "/groupDos.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
       "description": "Juan es el gerente de operaciones, apasionado por la tecnología y la gestión de equipos."
     },
     {
       "name": "Ana García",
-      "image": "/groupDos.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
       "description": "Ana es la encargada de marketing, con un gran enfoque en redes sociales y estrategia digital."
     },
     {
       "name": "Carlos López",
-      "image": "/groupDos.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
       "description": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
     },
     {
       "name": "Ian Rodriguez",
-      "image": "/xd.jpg",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
       "description": "Mateo es el director de programación, polivalente."
     },
     {
       "name": "Alma Marcela Gozo",
-      "image": "/groupDos.webp",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
       "description": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
     }
   ],
@@ -300,7 +300,7 @@
   "promotionsNow": {
     "title": "Título de la promoción",
     "description": "Descripción breve para el modal.",
-    "imageUrl": "/prueba.jpg"
+    "imageUrl": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/prueba_ecile9.jpg"
   }
 
 }

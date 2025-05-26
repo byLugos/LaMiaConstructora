@@ -10,7 +10,7 @@ export default function Galery() {
       <Navbar />
       <HeroSmall
       title='Alejandría'
-      image='/alejandria_alt.webp'/>
+      image='https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298094/alejandria_alt_q5oakn.webp'/>
       <ProjectIntro projectName='alejandria' logoWidth='250px' logoHeight='200'/>
       <ProjectDetails projectName='alejandria' unitIndex={0}/>
       <Cards/>

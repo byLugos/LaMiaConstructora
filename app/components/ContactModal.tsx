@@ -60,7 +60,6 @@ export default function ContactModal() {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Overlay general */}
           <motion.div
             className="fixed inset-0 bg-black bg-opacity-70 z-50"
             initial={{ opacity: 0 }}
@@ -69,7 +68,6 @@ export default function ContactModal() {
             onClick={handleClose}
           />
 
-          {/* Modal container */}
           <motion.div
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
             initial={{ opacity: 0, scale: 0.8, y: -50 }}
@@ -81,7 +79,6 @@ export default function ContactModal() {
               onClick={e => e.stopPropagation()}
               style={{ minHeight: '400px' }}
             >
-              {/* Imagen lateral */}
               <div
                 className="hidden md:block relative rounded-l-3xl flex-shrink-0"
                 style={{
@@ -108,7 +105,6 @@ export default function ContactModal() {
                 />
               </div>
 
-              {/* Formulario y contenido */}
               <div className="w-full md:w-2/3 p-8 md:p-12 relative z-10 flex flex-col">
                 <button
                   onClick={handleClose}
@@ -118,7 +114,6 @@ export default function ContactModal() {
                   &times;
                 </button>
 
-                {/* Título y descripción */}
                 <div className="mb-8">
                   <h2 className="text-3xl font-bold mb-2 text-[#454181]">{promoData.title}</h2>
                   <p className="text-gray-700">{promoData.description}</p>

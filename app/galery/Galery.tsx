@@ -34,13 +34,10 @@ export default function Galery() {
   if (!items.length) return null
   return (
     <section className="bg-white py-20 px-0 w-full">
-      {/* El contenedor ocupa 100% ancho */}
       <div className="w-full">
         <SectionTitle className="text-center mb-12 text-[#131A24]">
           NUESTRA GALERÍA
         </SectionTitle>
-
-        {/* Botones de filtro */}
         <div className="text-center mb-8">
           {categories.map((category, index) => (
             <button

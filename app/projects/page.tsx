@@ -10,7 +10,7 @@ export default function Galery() {
       <Navbar />
       <HeroSmall
       title='NUESTROS PROYECTOS'
-      image='/fondoHero_dos.webp'/>
+      image='https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298098/fondoHero_dos_srn63q.webp'/>
       <CompanyInfo dataPath='promotions'/>
       <Cards/>
       <WhyUs/>

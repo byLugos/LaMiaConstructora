@@ -10,7 +10,7 @@ export default function Galery() {
       <Navbar />
       <HeroSmall
       title='Galería'
-      image='/fondoHero.webp'/>
+      image='https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298097/fondoHero_ykqj1n.webp'/>
       <Galerys/>
       <AboutUs />
       <Footer/>

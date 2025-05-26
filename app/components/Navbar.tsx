@@ -72,7 +72,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/logo.png" alt="Logo La Mía" className="h-12" />
+          <img src="https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298103/logo_jhwpmg.png" alt="Logo La Mía" className="h-12" />
         </div>
 
         <nav className="hidden md:flex gap-8 text-[20px] font-normal text-black items-center">

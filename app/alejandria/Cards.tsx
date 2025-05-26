@@ -14,10 +14,10 @@ export default function ProjectMediaRibbon() {
   >(null);
 
   const galleryImages = [
-    "/isoalejandria.webp",
-    "/alejandria_alt.webp",
-    "/zonacomun.webp",
-    "/zonacomun.webp",
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp",
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/alejandria_alt_q5oakn.webp",
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/zonacomun_ep6phn.webp",
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/vistacenital_nimdbd.webp",
   ];
 
   const openModal = (type: "3d" | "video" | "gallery") => {

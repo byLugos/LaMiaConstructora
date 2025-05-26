@@ -17,7 +17,6 @@ type ProjectData = {
   status: string
   logo: string
   description: string
-  // ya no se usa images aquí
 }
 
 type GalleryItem = {
@@ -58,7 +57,6 @@ export default function ProjectIntroSection({
   const project = projects[projectName]
   if (!project) return <p>Proyecto no encontrado.</p>
 
-  // Filtrar imágenes de la galería por categoría igual al título del proyecto
   const projectImages = gallery.filter(
     (item) => item.category.toLowerCase() === project.title.toLowerCase()
   )

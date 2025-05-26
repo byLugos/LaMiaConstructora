@@ -37,7 +37,6 @@ export default function MiniCarousel() {
       ref={ref}
       className="bg-[#F8F8F8] py-28 px-6 flex flex-col lg:flex-row justify-between items-center"
     >
-      {/* Texto (30%) */}
       <motion.div
         className="lg:w-[30%] w-full"
         initial={{ opacity: 0, y: 20 }}
@@ -52,7 +51,6 @@ export default function MiniCarousel() {
         </Text>
         <Button href="https://www.youtube.com/@CONSTRUCTORALAMIA">Suscríbete!</Button>
       </motion.div>
-
       <motion.div
         className="lg:w-[70%] w-full mt-4"
         initial={{ opacity: 0, y: 20 }}
@@ -81,9 +79,7 @@ export default function MiniCarousel() {
           className="pb-12"
         >
           {proyectos.map((proyecto, index) => {
-            // Detectar si es link externo (empieza con http)
             const isExternal = proyecto.link_video.startsWith('http')
-
             return (
               <SwiperSlide key={index}>
                 <div className="relative w-full max-w-[350px]">
@@ -115,7 +111,6 @@ export default function MiniCarousel() {
                       />
                     </Link>
                   )}
-
                   <div className="absolute top-4 left-4 text-white text-[10px] font-semibold bg-[#131A24] bg-opacity-50 px-4 py-2 rounded-lg">
                     {proyecto.title}
                   </div>

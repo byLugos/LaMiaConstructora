@@ -87,7 +87,6 @@ export default function ProyectosCarousel() {
                   alt={proyecto.title}
                   className="w-full h-[400px] object-cover"
                 />
-
                 <AnimatePresence>
                   {hoverIndex === index && (
                     <motion.div
