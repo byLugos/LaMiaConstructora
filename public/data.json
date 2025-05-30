@@ -1,12 +1,16 @@
 {
+  "projectVideo": {
+    "videoUrl": "/video_hero.webm",
+    "poster": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298098/externa_dos_cge6uw.webp"
+  },
   "companyInfo": {
     "general": {
       "title": "La Mía Constructora",
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
       "contact": {
         "phoneOne": "311 311 3111",
-        "phoneTwo":"312 312 3222",
-        "phoneThree":"313 313 3333",
+        "phoneTwo": "312 312 3222",
+        "phoneThree": "313 313 3333",
         "email": "info@loremipsum.com",
         "whatsapp": "+123.456.78910",
         "address": "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting"
@@ -16,14 +20,14 @@
         "text": "Conoce más de nosotros"
       }
     },
-    "aboutUs":{
-      "titleOne":"Info básica acá",
-      "titleTwo":"Otra info acá",
-      "descriptionOne":"Eu eiusmod sunt non sunt cupidatat qui eiusmod elit. Est ad ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
-      "descriptionTwo":"ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
-      "button":{
-        "link":"/ourteam",
-        "text":"Conócenos!"
+    "aboutUs": {
+      "titleOne": "Info básica acá",
+      "titleTwo": "Otra info acá",
+      "descriptionOne": "Eu eiusmod sunt non sunt cupidatat qui eiusmod elit. Est ad ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
+      "descriptionTwo": "ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
+      "button": {
+        "link": "/ourteam",
+        "text": "Conócenos!"
       }
     },
     "socials": [
@@ -81,7 +85,7 @@
       "key": "colina",
       "title": "La Colina 1",
       "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298095/colina_logo_qyabwb.webp",
-      "logoSize": { "width": "w-40", "height": "h-70" }, 
+      "logoSize": { "width": "w-40", "height": "h-70" },
       "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298096/colina_altdos_ir0w7a.webp",
       "link": "/colina",
       "buttonLabel": "Conocer Proyecto",
@@ -114,7 +118,10 @@
         "units": [
           {
             "unitTitle": "Apartamento Tipo A",
-            "planos": ["https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298101/isoalejandriados_hkeijs.webp"],
+            "planos": [
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp",
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298101/isoalejandriados_hkeijs.webp"
+            ],
             "features": [
               { "title": "Metros construidos", "value": "75 m²" },
               { "title": "Habitaciones", "value": "3" },
@@ -143,12 +150,19 @@
       "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298095/colina_logo_qyabwb.webp",
       "status": "Finalizado",
       "description": "Descripción para el proyecto La Colina...",
-      "images": ["https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298094/balcon_tmijeo.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298100/fuente_tres_sen8da.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298099/fuente_dos_jiv8dd.webp"],
+      "images": [
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298094/balcon_tmijeo.webp",
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298100/fuente_tres_sen8da.webp",
+        "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298099/fuente_dos_jiv8dd.webp"
+      ],
       "technicalDetails": {
         "units": [
           {
             "unitTitle": "Apartamento Tipo A",
-            "planos": ["https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolina_y1d3ul.webp", "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolinados_xhbb4b.webp"],
+            "planos": [
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolina_y1d3ul.webp",
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolinados_xhbb4b.webp"
+            ],
             "features": [
               { "title": "Metros construidos", "value": "70 m²" },
               { "title": "Habitaciones", "value": "3" },
@@ -238,7 +252,11 @@
       "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298100/fuente_tres_sen8da.webp",
       "category": "La Colina"
     },
-    { "title": "Vista balcón", "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/balcon_tmijeo.webp", "category": "La Colina" }
+    {
+      "title": "Vista balcón",
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/balcon_tmijeo.webp",
+      "category": "La Colina"
+    }
   ],
 
   "forms": {
@@ -301,6 +319,47 @@
     "title": "Título de la promoción",
     "description": "Descripción breve para el modal.",
     "imageUrl": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/prueba_ecile9.jpg"
-  }
-
+  },
+  "makeUsDifferent": [
+    {
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748301820/group_xwqjvw.jpg",
+      "title": "Asesoría",
+      "subtitle": "Estamos contigo antes, durante y después de la compra.",
+      "items": [
+        "Materiales certificados",
+        "Normas internacionales",
+        "Personal capacitado"
+      ]
+    },
+    {
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298099/fuente_dos_jiv8dd.webp",
+      "title": "Calidad",
+      "subtitle": "Espacios pensados para tu comodidad y estilo de vida.",
+      "items": [
+        "Planos optimizados",
+        "Iluminación natural",
+        "Acabados elegantes"
+      ]
+    },
+    {
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298098/fondoHero_dos_srn63q.webp",
+      "title": "Acabados",
+      "subtitle": "Materiales y procesos garantizados para tu tranquilidad.",
+      "items": [
+        "Transporte público cercano",
+        "Centros comerciales",
+        "Áreas recreativas"
+      ]
+    },
+    {
+      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298098/externa_dos_cge6uw.webp",
+      "title": "Cumplimiento",
+      "subtitle": "Haciendo de todo lo que necesitas.",
+      "items": [
+        "Asesoría personalizada",
+        "Postventa garantizada",
+        "Canales de comunicación abiertos"
+      ]
+    }
+  ]
 }

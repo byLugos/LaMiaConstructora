@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import {
   FaFacebookF,
   FaTwitter,
@@ -11,55 +11,61 @@ import {
   FaYoutube,
   FaPhone,
   FaEnvelope,
-  FaMapMarkerAlt
-} from 'react-icons/fa'
-import Button from '@/app/components/ui/Button'
-import Subtitle from './ui/SectionSubtitle'
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import Button from "@/app/components/ui/Button";
+import Subtitle from "./ui/SectionSubtitle";
 
 type SocialItem = {
-  name: string
-  icon: string
-  url: string
-}
+  name: string;
+  icon: string;
+  url: string;
+};
 
 type ContactInfo = {
-  phone: string
-  email: string
-  whatsapp?: string
-  address: string
-}
+  phone: string;
+  email: string;
+  whatsapp?: string;
+  address: string;
+};
 
 type CompanyInfo = {
   general: {
-    name: string
-    description: string
-    contact: ContactInfo
-  }
-  socials: SocialItem[]
-  legal: string
-}
+    name: string;
+    description: string;
+    contact: ContactInfo;
+  };
+  socials: SocialItem[];
+  legal: string;
+};
 
 export default function Footer() {
-  const [data, setData] = useState<CompanyInfo | null>(null)
+  const [data, setData] = useState<CompanyInfo | null>(null);
 
-  const { ref: topRef, inView: topInView } = useInView({ triggerOnce: true, threshold: 0.5 })
-  const { ref: bottomRef, inView: bottomInView } = useInView({ triggerOnce: true, threshold: 0.5 })
+  const { ref: topRef, inView: topInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const { ref: bottomRef, inView: bottomInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   useEffect(() => {
-    fetch('/data.json')
-      .then(res => res.json())
-      .then(data => setData(data.companyInfo))
-  }, [])
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setData(data.companyInfo));
+  }, []);
 
-  if (!data) return null
+  if (!data) return null;
 
   const iconMap: Record<string, JSX.Element> = {
     facebook: <FaFacebookF />,
     twitter: <FaTwitter />,
     instagram: <FaInstagram />,
     linkedin: <FaLinkedinIn />,
-    youtube: <FaYoutube />
-  }
+    youtube: <FaYoutube />,
+  };
 
   return (
     <footer className="bg-white text-[#131A24]">
@@ -122,10 +128,16 @@ export default function Footer() {
         className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
         initial={{ opacity: 0, y: 30 }}
         animate={bottomInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="col-span-1">
-          <img src="/logo.png" alt="Logo La Mía" className="h-20 mb-4" />
+          <a href="#">
+            <img
+              src="https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298103/logo_jhwpmg.png"
+              alt="Logo La Mía"
+              className="h-20 mb-4"
+            />
+          </a>
         </div>
         <div>
           <h4 className="font-bold mb-4">{data.general.name}</h4>
@@ -148,7 +160,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold mb-4">Redes Sociales</h4>
           <div className="flex flex-wrap gap-6 mt-6 justify-start">
-            {data.socials.map(item => (
+            {data.socials.map((item) => (
               <a
                 key={item.name}
                 href={item.url}
@@ -157,7 +169,9 @@ export default function Footer() {
                 className="flex flex-col items-center text-center text-sm"
                 aria-label={item.name}
               >
-                <div className="text-2xl mb-1">{iconMap[item.icon] || <span />}</div>
+                <div className="text-2xl mb-1">
+                  {iconMap[item.icon] || <span />}
+                </div>
                 {item.name}
               </a>
             ))}
@@ -169,5 +183,5 @@ export default function Footer() {
         {data.legal}
       </div>
     </footer>
-  )
+  );
 }

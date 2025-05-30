@@ -1,83 +1,99 @@
 'use client'
 
-import Link from 'next/link'
-import { FiMenu, FiX } from 'react-icons/fi'
-import { FaWhatsapp } from 'react-icons/fa'
-import { useEffect, useState, useRef } from 'react'
-import Text from '@/app/components/ui/Text'
+import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+import { useEffect, useState, useRef } from "react";
+import Text from "@/app/components/ui/Text";
 
 type NavigationItem = {
-  label: string
-  link: string
-}
+  label: string;
+  link: string;
+};
 
 export default function Navbar() {
-  const [telefonos, setTelefonos] = useState<string[]>([])
-  const [links, setLinks] = useState<NavigationItem[]>([])
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const [currentWhatsappIndex, setCurrentWhatsappIndex] = useState(0)
+  const [telefonos, setTelefonos] = useState<string[]>([]);
+  const [links, setLinks] = useState<NavigationItem[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [currentWhatsappIndex, setCurrentWhatsappIndex] = useState(0);
 
-  const isRotatingRef = useRef(false)
+  const isRotatingRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
 
-    fetch('/data.json')
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
-        if (data.navigation?.items) setLinks(data.navigation.items)
+        if (data.navigation?.items) setLinks(data.navigation.items);
 
         if (data.companyInfo?.general?.contact) {
-          const contact = data.companyInfo.general.contact
-          const nums = [
-            contact.phoneOne,
-            contact.phoneTwo,
-            contact.phoneThree
-          ]
+          const contact = data.companyInfo.general.contact;
+          const nums = [contact.phoneOne, contact.phoneTwo, contact.phoneThree]
             .filter(Boolean)
-            .map((num: string) => num.replace(/\D/g, ''))
-          setTelefonos(nums)
+            .map((num: string) => num.replace(/\D/g, ""));
+          setTelefonos(nums);
         }
-      })
+      });
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleWhatsappClick = (e: React.MouseEvent) => {
-    e.preventDefault()
-    if (telefonos.length === 0) return
+    e.preventDefault();
+    if (telefonos.length === 0) return;
 
-    const numero = telefonos[currentWhatsappIndex]
-    const url = `https://wa.me/${numero}`
-    window.open(url, '_blank')
+    const numero = telefonos[currentWhatsappIndex];
+    const url = `https://wa.me/${numero}`;
+    window.open(url, "_blank");
 
     if (!isRotatingRef.current) {
-      isRotatingRef.current = true
+      isRotatingRef.current = true;
       setTimeout(() => {
-        setCurrentWhatsappIndex((prev) => (prev + 1) % telefonos.length)
-        isRotatingRef.current = false
-      }, 1000) 
+        setCurrentWhatsappIndex((prev) => (prev + 1) % telefonos.length);
+        isRotatingRef.current = false;
+      }, 1000);
     }
-  }
+  };
 
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/85 shadow-md' : 'bg-white'
+        scrolled ? "bg-white/70 shadow-md backdrop-blur-[1px]" : "bg-white"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <img src="https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298103/logo_jhwpmg.png" alt="Logo La Mía" className="h-12" />
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
+        <div className="flex items-center space-x-2">
+          {/* Logo principal - siempre visible y flotando arriba */}
+          <a href="#" className="relative z-20">
+            <img
+              src="2.png"
+              alt="Logo La Mía"
+              className="h-14"
+              style={{ background: "transparent" }} // Sin fondo, en caso tenga
+            />
+          </a>
+
+          {/* Texto - desaparece al hacer scroll */}
+          <img
+            src="texto.png"
+            alt="Texto Logo"
+            className={`h-7 transition-opacity duration-300 ${
+              scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+            }`}
+          />
         </div>
 
-        <nav className="hidden md:flex gap-8 text-[20px] font-normal text-black items-center">
+        <nav className="hidden md:flex gap-8 text-[20px] font-normal text-black items-center relative z-10">
           {links.map((link) => (
-            <Text key={link.link} className="font-extrabold hover:text-[#454181]">
+            <Text
+              key={link.link}
+              className="font-extrabold hover:text-[#454181]"
+            >
               <Link href={link.link}>{link.label}</Link>
             </Text>
           ))}
@@ -122,5 +138,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }
