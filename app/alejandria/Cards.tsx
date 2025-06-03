@@ -1,17 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import Image from "next/image";
 
 export default function ProjectMediaRibbon() {
+  const [mounted, setMounted] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<
-    "3d" | "video" | "gallery" | null
-  >(null);
+  const [modalContent, setModalContent] = useState<"3d" | "video" | "gallery" | null>(null);
+
+  useEffect(() => {
+    Modal.setAppElement("#__next"); // accesibilidad para modal
+    setMounted(true);
+  }, []);
 
   const galleryImages = [
     "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp",
@@ -30,22 +33,21 @@ export default function ProjectMediaRibbon() {
     setModalContent(null);
   };
 
+  if (!mounted) return null;
+
   return (
     <>
-      <div className=" mx-auto flex gap-10 px-6 py-12 overflow-x-auto scrollbar-hide bg-white">
+      <div className="mx-auto flex gap-10 px-6 py-12 overflow-x-auto bg-white">
         <div
           onClick={() => openModal("3d")}
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
-          style={{ backgroundImage: "url(/isoalejandria.webp)" }} 
+          style={{ backgroundImage: "url(/isoalejandria.webp)" }}
           title="Recorrido 3D"
         >
           <span className="absolute inset-0 bg-black/40 rounded-lg"></span>
-          <p className="relative text-white font-semibold text-lg z-10">
-            Recorrido 3D
-          </p>
+          <p className="relative text-white font-semibold text-lg z-10">Recorrido 3D</p>
         </div>
 
-        {/* Card Video */}
         <div
           onClick={() => openModal("video")}
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
@@ -53,12 +55,9 @@ export default function ProjectMediaRibbon() {
           title="Video"
         >
           <span className="absolute inset-0 bg-black/40 rounded-lg"></span>
-          <p className="relative text-white font-semibold text-lg z-10">
-            Video
-          </p>
+          <p className="relative text-white font-semibold text-lg z-10">Video</p>
         </div>
 
-        {/* Card Galería */}
         <div
           onClick={() => openModal("gallery")}
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
@@ -66,13 +65,11 @@ export default function ProjectMediaRibbon() {
           title="Galería"
         >
           <span className="absolute inset-0 bg-black/40 rounded-lg"></span>
-          <p className="relative text-white font-semibold text-lg z-10">
-            Galería
-          </p>
+          <p className="relative text-white font-semibold text-lg z-10">Galería</p>
         </div>
 
         <a
-          href="https://maps.google.com/?q=4.710989,-74.072090" 
+          href="https://maps.google.com/?q=4.710989,-74.072090"
           target="_blank"
           rel="noopener noreferrer"
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
@@ -132,10 +129,13 @@ export default function ProjectMediaRibbon() {
           >
             {galleryImages.map((img, i) => (
               <SwiperSlide key={i}>
-                <img
+                <Image
                   src={img}
                   alt={`Galería imagen ${i + 1}`}
-                  className="w-full max-h-[80vh] object-contain"
+                  className="object-contain"
+                  width={800}
+                  height={450}
+                  style={{ maxHeight: "80vh", width: "100%" }}
                 />
               </SwiperSlide>
             ))}

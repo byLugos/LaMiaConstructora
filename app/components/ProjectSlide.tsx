@@ -1,7 +1,8 @@
-"use client";
+'use client'
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Title from "@/app/components/ui/Title";
@@ -102,16 +103,20 @@ export default function ProjectSlide() {
         {logo && (
           <motion.div
             key={`logo-${current}`}
-            className={`absolute top-[30%] right-60 transform -translate-y-1/2 ${logoWidth} ${logoHeight}`}
+            className={`absolute top-[30%] right-60 transform -translate-y-1/2`}
+            style={{ width: logoWidth, height: logoHeight }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <img
+            <Image
               src={logo}
               alt={`${title} logo`}
-              className="object-contain w-full h-full"
+              width={parseInt(logoWidth)}
+              height={parseInt(logoHeight)}
+              style={{ objectFit: 'contain' }}
+              priority
             />
           </motion.div>
         )}

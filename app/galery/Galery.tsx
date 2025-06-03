@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import SectionTitle from '@/app/components/ui/SectionTitle'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 type GaleriaItem = {
   title: string
@@ -16,15 +17,23 @@ export default function Galery() {
   const [activeCategory, setActiveCategory] = useState<string>('') 
 
   useEffect(() => {
-    fetch('/data.json')
-      .then(res => res.json())
-      .then(data => {
-        setItems(data.gallery)
-        const categoriasUnicas = Array.from(new Set(data.gallery.map((i: GaleriaItem) => i.category)))
-        setActiveCategory(categoriasUnicas[0] || '')
-        setFilteredItems(data.gallery.filter((i: GaleriaItem) => i.category === categoriasUnicas[0]))
-      })
-  }, [])
+  fetch('/data.json')
+    .then(res => res.json())
+    .then(data => {
+      if (!data.gallery || !Array.isArray(data.gallery)) {
+        setItems([])
+        setActiveCategory('')
+        setFilteredItems([])
+        return
+      }
+
+      setItems(data.gallery)
+      const categoriasUnicas = Array.from(new Set(data.gallery.map((i: GaleriaItem) => i.category)))
+      const firstCategory = typeof categoriasUnicas[0] === 'string' ? categoriasUnicas[0] : ''
+      setActiveCategory(firstCategory)
+      setFilteredItems(data.gallery.filter((i: GaleriaItem) => i.category === firstCategory))
+    })
+}, [])
 
   const filterItems = (category: string) => {
     setActiveCategory(category)
@@ -63,11 +72,14 @@ export default function Galery() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
-                style={{ display: 'block' }} 
+                fill
+                style={{ objectFit: 'cover', display: 'block' }}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                priority={index === 0}
+                className="transform transition-transform duration-300 hover:scale-105"
               />
               <div className="absolute bottom-1 left-1 bg-black bg-opacity-60 px-1.5 py-0.5 rounded text-xs text-white select-none pointer-events-none">
                 {item.title}
@@ -79,5 +91,3 @@ export default function Galery() {
     </section>
   )
 }
-
-

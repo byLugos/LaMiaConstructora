@@ -1,78 +1,70 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import Modal from "react-modal";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import { useState } from 'react'
+import Modal from 'react-modal'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules'
+import Image from 'next/image'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
 export default function ProjectMediaRibbon() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<
-    "3d" | "video" | "gallery" | null
-  >(null);
+  const [modalOpen, setModalOpen] = useState(false)
+  const [modalContent, setModalContent] = useState<'3d' | 'video' | 'gallery' | null>(null)
 
   const galleryImages = [
-    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298102/isocolina_y1d3ul.webp",
-    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298095/colina_alt_m7t826.webp",
-    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/balcon_tmijeo.webp",
-    "https://res.cloudinary.com/dwowtfmgn/image/upload//q_auto,f_auto/v1748298094/vista_general_ig2ml5.webp",
-  ];
+    'https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298102/isocolina_y1d3ul.webp',
+    'https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298095/colina_alt_m7t826.webp',
+    'https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/balcon_tmijeo.webp',
+    'https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/vista_general_ig2ml5.webp',
+  ]
 
-  const openModal = (type: "3d" | "video" | "gallery") => {
-    setModalContent(type);
-    setModalOpen(true);
-  };
+  const openModal = (type: '3d' | 'video' | 'gallery') => {
+    setModalContent(type)
+    setModalOpen(true)
+  }
 
   const closeModal = () => {
-    setModalOpen(false);
-    setModalContent(null);
-  };
+    setModalOpen(false)
+    setModalContent(null)
+  }
 
   return (
     <>
-      <div className=" mx-auto flex gap-10 px-6 py-12 overflow-x-auto scrollbar-hide bg-white">
+      <div className="mx-auto flex gap-10 px-6 py-12 overflow-x-auto scrollbar-hide bg-white">
         <div
-          onClick={() => openModal("3d")}
+          onClick={() => openModal('3d')}
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
-          style={{ backgroundImage: "url(/isoalejandria.webp)" }} 
+          style={{ backgroundImage: 'url(/isoalejandria.webp)' }}
           title="Recorrido 3D"
         >
           <span className="absolute inset-0 bg-black/40 rounded-lg"></span>
-          <p className="relative text-white font-semibold text-lg z-10">
-            Recorrido 3D
-          </p>
+          <p className="relative text-white font-semibold text-lg z-10">Recorrido 3D</p>
         </div>
 
-        {/* Card Video */}
         <div
-          onClick={() => openModal("video")}
+          onClick={() => openModal('video')}
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
-          style={{ backgroundImage: "url(/alejandria_alt.webp)" }}
+          style={{ backgroundImage: 'url(/alejandria_alt.webp)' }}
           title="Video"
         >
           <span className="absolute inset-0 bg-black/40 rounded-lg"></span>
-          <p className="relative text-white font-semibold text-lg z-10">
-            Video
-          </p>
+          <p className="relative text-white font-semibold text-lg z-10">Video</p>
         </div>
 
-        {/* Card Galería */}
         <div
-          onClick={() => openModal("gallery")}
+          onClick={() => openModal('gallery')}
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
-          style={{ backgroundImage: "url(/zonacomun.webp)" }}
+          style={{ backgroundImage: 'url(/zonacomun.webp)' }}
           title="Galería"
         >
           <span className="absolute inset-0 bg-black/40 rounded-lg"></span>
-          <p className="relative text-white font-semibold text-lg z-10">
-            Galería
-          </p>
+          <p className="relative text-white font-semibold text-lg z-10">Galería</p>
         </div>
 
         <a
-          href="https://maps.google.com/?q=4.710989,-74.072090" 
+          href="https://maps.google.com/?q=4.710989,-74.072090"
           target="_blank"
           rel="noopener noreferrer"
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
@@ -97,7 +89,7 @@ export default function ProjectMediaRibbon() {
           &times;
         </button>
 
-        {modalContent === "3d" && (
+        {modalContent === '3d' && (
           <div className="aspect-video w-full">
             <iframe
               src="https://my.matterport.com/show/?m=9BDSyscMXG7"
@@ -109,7 +101,7 @@ export default function ProjectMediaRibbon() {
           </div>
         )}
 
-        {modalContent === "video" && (
+        {modalContent === 'video' && (
           <div className="aspect-video w-full">
             <iframe
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
@@ -122,7 +114,7 @@ export default function ProjectMediaRibbon() {
           </div>
         )}
 
-        {modalContent === "gallery" && (
+        {modalContent === 'gallery' && (
           <Swiper
             modules={[Pagination, Navigation]}
             navigation
@@ -132,10 +124,13 @@ export default function ProjectMediaRibbon() {
           >
             {galleryImages.map((img, i) => (
               <SwiperSlide key={i}>
-                <img
+                <Image
                   src={img}
                   alt={`Galería imagen ${i + 1}`}
-                  className="w-full max-h-[80vh] object-contain"
+                  width={800}
+                  height={450}
+                  className="object-contain"
+                  style={{ maxHeight: '80vh', width: '100%' }}
                 />
               </SwiperSlide>
             ))}
@@ -143,5 +138,5 @@ export default function ProjectMediaRibbon() {
         )}
       </Modal>
     </>
-  );
+  )
 }

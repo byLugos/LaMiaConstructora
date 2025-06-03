@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -82,11 +83,18 @@ export default function ProyectosCarousel() {
                 onMouseLeave={() => setHoverIndex(null)}
                 aria-label={`Ver más sobre ${proyecto.title}`}
               >
-                <img
-                  src={proyecto.image}
-                  alt={proyecto.title}
-                  className="w-full h-[400px] object-cover"
-                />
+                <div className="relative w-full h-[400px]">
+                  <Image
+                    src={proyecto.image}
+                    alt={proyecto.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={index === 0}
+                    className="rounded-[20px]"
+                  />
+                </div>
+
                 <AnimatePresence>
                   {hoverIndex === index && (
                     <motion.div
@@ -96,11 +104,14 @@ export default function ProyectosCarousel() {
                       transition={{ duration: 0.4, ease: 'easeInOut' }}
                       className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center pointer-events-none rounded-[20px]"
                     >
-                      <img
-                        src={proyecto.logo}
-                        alt={`${proyecto.title} logo`}
-                        className="max-h-24 max-w-48 object-contain"
-                      />
+                      <div className="relative w-48 h-24">
+                        <Image
+                          src={proyecto.logo}
+                          alt={`${proyecto.title} logo`}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

@@ -137,7 +137,7 @@ export default function ContactForm() {
           className="p-4 rounded-md text-black md:col-span-2 min-h-[150px]"
         />
         <div className="md:col-span-2 flex justify-center mt-4">
-          <Button type="submit">{data.button}</Button>
+          <Button>{data.button}</Button>
         </div>
       </motion.form>
 

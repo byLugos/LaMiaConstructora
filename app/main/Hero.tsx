@@ -26,7 +26,7 @@ export default function Hero() {
   if (!videoData) return null;
 
   return (
-    <section className="relative h-[85vh] w-full flex justify-center items-center bg-white px-4">
+    <section className="relative h-[81vh] w-full flex justify-center items-center bg-white px-4">
       <div className="w-[1300px] h-full rounded-[30px] overflow-hidden shadow-lg relative">
         <video
           src={videoData.videoUrl}

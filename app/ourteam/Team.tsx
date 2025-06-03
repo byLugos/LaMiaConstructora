@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import SectionTitle from '@/app/components/ui/SectionTitle'
 import SectionSubtitle from '@/app/components/ui/SectionSubtitle'
 import Text from '@/app/components/ui/Text'
@@ -32,11 +33,16 @@ export default function Team() {
             key={index}
             className="bg-[#F8F8F8] p-6 rounded-lg shadow-lg transform hover:scale-105 duration-300 ease-in-out"
           >
-            <img
-              src={empleado.image}
-              alt={empleado.name}
-              className="w-32 h-32 object-cover rounded-full mx-auto mb-4"
-            />
+            <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+              <Image
+                src={empleado.image}
+                alt={empleado.name}
+                fill
+                style={{ objectFit: 'cover' }}
+                sizes="128px"
+                priority={index === 0} // Carga prioritaria solo para la primera imagen
+              />
+            </div>
             <SectionSubtitle className="text-center text-[#454181]">{empleado.name}</SectionSubtitle>
             <Text className="text-center text-sm text-[#454181]">{empleado.description}</Text>
           </div>

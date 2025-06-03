@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link";
+import Image from "next/image";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { useEffect, useState, useRef } from "react";
@@ -69,20 +70,24 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
         <div className="flex items-center space-x-2">
           {/* Logo principal - siempre visible y flotando arriba */}
-          <a href="#" className="relative z-20">
-            <img
-              src="2.png"
+          <Link href="#" className="relative z-20">
+            <Image
+              src="/2.png"
               alt="Logo La Mía"
-              className="h-14"
-              style={{ background: "transparent" }} // Sin fondo, en caso tenga
+              width={56}   // Ajusta el ancho aquí (h-14 ~ 56px)
+              height={56}  // Ajusta la altura para mantener proporción o usa layout="intrinsic"
+              style={{ background: "transparent" }}
+              priority={true}
             />
-          </a>
+          </Link>
 
           {/* Texto - desaparece al hacer scroll */}
-          <img
-            src="texto.png"
+          <Image
+            src="/texto.png"
             alt="Texto Logo"
-            className={`h-7 transition-opacity duration-300 ${
+            width={112} // Ajusta ancho (ejemplo h-7 ~ 28px altura)
+            height={28}
+            className={`transition-opacity duration-300 ${
               scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
             }`}
           />

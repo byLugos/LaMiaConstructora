@@ -1,32 +1,33 @@
 'use client'
 
-import { useEffect, useState } from "react";
-import SectionTitle from "@/app/components/ui/SectionTitle";
-import SectionSubtitle from "@/app/components/ui/SectionSubtitle";
-import Text from "@/app/components/ui/Text";
-import { FaCheckCircle } from "react-icons/fa";
+import { useEffect, useState } from "react"
+import SectionTitle from "@/app/components/ui/SectionTitle"
+import SectionSubtitle from "@/app/components/ui/SectionSubtitle"
+import Text from "@/app/components/ui/Text"
+import { FaCheckCircle } from "react-icons/fa"
+import Image from "next/image"
 
 type Differentiator = {
-  image: string;
-  title: string;
-  subtitle: string;
-  items: string[];
-};
+  image: string
+  title: string
+  subtitle: string
+  items: string[]
+}
 
 export default function WhatMakesUsDifferent() {
-  const [data, setData] = useState<Differentiator[]>([]);
+  const [data, setData] = useState<Differentiator[]>([])
 
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
       .then((json) => {
         if (json.makeUsDifferent) {
-          setData(json.makeUsDifferent);
+          setData(json.makeUsDifferent)
         }
-      });
-  }, []);
+      })
+  }, [])
 
-  if (!data.length) return null;
+  if (!data.length) return null
 
   return (
     <section className="bg-white py-10 px-6 max-w-7xl mx-auto">
@@ -39,19 +40,20 @@ export default function WhatMakesUsDifferent() {
           <div
             key={idx}
             className="flex flex-col bg-[#f8f8f8] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-xs mx-auto"
-            style={{ height: "auto" }} // Altura flexible
+            style={{ height: "auto" }}
           >
-            <img
-              src={card.image}
-              alt={card.title}
-              className="w-full h-48 object-cover"
-              style={{
-                width: "100%",
-                height: "192px",
-                minHeight: "192px",
-                maxHeight: "192px",
-              }}
-            />
+            <div className="relative w-full h-[192px]">
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                priority={idx === 0} // Prioriza la primera imagen si quieres
+                className="rounded-t-xl"
+              />
+            </div>
+
             <div className="p-6 flex flex-col flex-grow justify-between">
               <div>
                 <SectionSubtitle className="text-xl font-semibold mb-4 text-[#454181]">
@@ -63,7 +65,7 @@ export default function WhatMakesUsDifferent() {
               <ul className="space-y-6">
                 {card.items.map((item, i) => (
                   <li key={i} className="flex items-center text-gray-700">
-                    <FaCheckCircle className=" h-5 text-[#454181] mr-2 flex-shrink-0" />
+                    <FaCheckCircle className="h-5 text-[#454181] mr-2 flex-shrink-0" />
                     <Text>{item}</Text>
                   </li>
                 ))}
@@ -73,5 +75,5 @@ export default function WhatMakesUsDifferent() {
         ))}
       </div>
     </section>
-  );
+  )
 }

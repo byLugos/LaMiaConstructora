@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import SectionTitle from '@/app/components/ui/SectionTitle'
+import Image from 'next/image'
 
 type GaleriaItem = {
   titulo: string
@@ -36,10 +37,13 @@ export default function Galeria() {
                 key={index}
                 className={`relative overflow-hidden rounded-xl bg-gray-200 ${span} ${rowSpan} flex items-end`}
               >
-                <img
+                <Image
                   src={item.imagen}
                   alt={item.titulo}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="absolute inset-0"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="relative z-10 bg-black/40 w-full text-center py-2 text-white font-semibold">
                   {item.titulo}

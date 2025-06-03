@@ -20,6 +20,8 @@ import {
   FaDoorOpen,
 } from 'react-icons/fa'
 
+import Image from 'next/image'
+
 type TechnicalFeature = {
   title: string
   value: string
@@ -84,10 +86,13 @@ export default function ProjectTechnicalDetails({
         >
           {unit.planos.map((plano, i) => (
             <SwiperSlide key={i}>
-              <img
+              <Image
                 src={plano}
                 alt={`Plano ${i + 1}`}
-                className="w-full h-80 object-cover rounded-lg"
+                width={800}   // Ajusta el tamaño adecuado
+                height={320}  // Ajusta según proporción
+                className="object-cover rounded-lg"
+                priority={i === 0} // Prioriza la primera imagen para LCP
               />
             </SwiperSlide>
           ))}

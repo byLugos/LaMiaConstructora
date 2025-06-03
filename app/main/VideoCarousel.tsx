@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css'
@@ -91,23 +92,41 @@ export default function MiniCarousel() {
                       className="block relative"
                     >
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                        <img src="/youtube.svg" alt="YouTube" className="w-12 h-12" />
+                        <Image
+                          src="/youtube.svg"
+                          alt="YouTube"
+                          width={48}
+                          height={48}
+                          priority={true}
+                        />
                       </div>
-                      <img
+                      <Image
                         src={proyecto.image}
                         alt={proyecto.title}
-                        className="w-full h-[200px] object-cover rounded-[20px] filter blur-[1px]"
+                        width={350}
+                        height={200}
+                        className="rounded-[20px] filter blur-[1px]"
+                        style={{ objectFit: 'cover' }}
                       />
                     </a>
                   ) : (
                     <Link href={proyecto.link_video} className="block relative">
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                        <img src="/youtube.svg" alt="YouTube" className="w-12 h-12" />
+                        <Image
+                          src="/youtube.svg"
+                          alt="YouTube"
+                          width={48}
+                          height={48}
+                          priority={true}
+                        />
                       </div>
-                      <img
+                      <Image
                         src={proyecto.image}
                         alt={proyecto.title}
-                        className="w-full h-[200px] object-cover rounded-[20px] filter blur-[1px]"
+                        width={350}
+                        height={200}
+                        className="rounded-[20px] filter blur-[1px]"
+                        style={{ objectFit: 'cover' }}
                       />
                     </Link>
                   )}
@@ -123,3 +142,4 @@ export default function MiniCarousel() {
     </section>
   )
 }
+

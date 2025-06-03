@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css/pagination'
+import Image from 'next/image'
 
 type ProjectData = {
   url: string
@@ -31,14 +32,14 @@ type ProjectsData = {
 
 interface Props {
   projectName: string
-  logoWidth?: string
-  logoHeight?: string
+  logoWidth?: number | string
+  logoHeight?: number | string
 }
 
 export default function ProjectIntroSection({
   projectName,
-  logoWidth = '120px',
-  logoHeight = '150px',
+  logoWidth = 120,
+  logoHeight = 150,
 }: Props) {
   const [projects, setProjects] = useState<ProjectsData | null>(null)
   const [gallery, setGallery] = useState<GalleryItem[]>([])
@@ -65,16 +66,22 @@ export default function ProjectIntroSection({
     <section className="w-full mx-auto px-6 py-20 flex flex-col lg:flex-row gap-12 bg-white">
       <div className="lg:w-1/2 flex flex-col justify-center">
         <SectionTitle className="mb-6">{project.title}</SectionTitle>
-        <img
-          src={project.logo}
-          alt={project.title}
-          style={{ width: logoWidth, height: logoHeight }}
-          className="mb-4"
-        />
+
+        <div className="mb-4" style={{ width: logoWidth, height: logoHeight, position: 'relative' }}>
+          <Image
+            src={project.logo}
+            alt={project.title}
+            fill
+            style={{ objectFit: 'contain' }}
+            priority
+          />
+        </div>
+
         <SectionSubtitle className="mb-2">{project.location}</SectionSubtitle>
         <Text className="mb-4 text-yellow-600 font-bold">{project.status}</Text>
         <Text className="mb-4">{project.description}</Text>
       </div>
+
       <div className="lg:w-1/2">
         <Swiper
           pagination={{ clickable: true }}
@@ -85,11 +92,15 @@ export default function ProjectIntroSection({
         >
           {projectImages.map((img, i) => (
             <SwiperSlide key={i}>
-              <img
-                src={img.image}
-                alt={`${project.title} image ${i + 1}`}
-                className="w-full h-80 object-cover rounded-lg"
-              />
+              <div className="relative w-full h-80 rounded-lg overflow-hidden">
+                <Image
+                  src={img.image}
+                  alt={`${project.title} image ${i + 1}`}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority={i === 0} // Prioriza la primera imagen para mejor LCP
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
