@@ -71,7 +71,8 @@ export default function ProjectIntroSection({
           <Image
             src={project.logo}
             alt={project.title}
-            fill
+            width={200}
+            height={200}
             style={{ objectFit: 'contain' }}
             priority
           />
@@ -96,7 +97,7 @@ export default function ProjectIntroSection({
                 <Image
                   src={img.image}
                   alt={`${project.title} image ${i + 1}`}
-                  fill
+                  layout='fill'
                   style={{ objectFit: 'cover' }}
                   priority={i === 0} // Prioriza la primera imagen para mejor LCP
                 />

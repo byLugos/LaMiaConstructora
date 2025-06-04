@@ -114,7 +114,7 @@ export default function ProjectSlide() {
               src={logo}
               alt={`${title} logo`}
               width={parseInt(logoWidth)}
-              height={parseInt(logoHeight)}
+              height={parseInt(logoHeight)} 
               style={{ objectFit: 'contain' }}
               priority
             />

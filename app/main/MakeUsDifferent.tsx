@@ -30,7 +30,7 @@ export default function WhatMakesUsDifferent() {
   if (!data.length) return null
 
   return (
-    <section className="bg-white py-10 px-6 max-w-7xl mx-auto">
+    <section className="bg-white py-10 px-6 w-full mx-auto">
       <SectionTitle className="text-center mb-16 text-[black]">
         ¿Por qué somos diferentes?
       </SectionTitle>
@@ -46,9 +46,8 @@ export default function WhatMakesUsDifferent() {
               <Image
                 src={card.image}
                 alt={card.title}
-                fill
+                layout="fill"
                 style={{ objectFit: "cover" }}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 priority={idx === 0} // Prioriza la primera imagen si quieres
                 className="rounded-t-xl"
               />

@@ -94,10 +94,10 @@ export default function Cards() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  fill
+                  layout='fill'
                   className="object-cover group-hover:blur-none blur-[3px] transition duration-300 ease-in-out"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority={index === 0} // prioriza la primera imagen
+                  priority={index === 0}
                 />
               </div>
               <div className="p-6">

@@ -1,27 +1,23 @@
-"use client";
+'use client'
 
-import { useState, useEffect } from "react";
-import Modal from "react-modal";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Navigation } from 'swiper/modules'
+import Modal from "react-modal"; 
+import 'swiper/css';
+import 'swiper/css/pagination';
 import Image from "next/image";
 
 export default function ProjectMediaRibbon() {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false); 
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState<"3d" | "video" | "gallery" | null>(null);
 
   useEffect(() => {
-    Modal.setAppElement("#__next"); // accesibilidad para modal
-    setMounted(true);
+    if (typeof window !== "undefined") {
+      setMounted(true);
+    }
   }, []);
-
-  const galleryImages = [
-    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp",
-    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/alejandria_alt_q5oakn.webp",
-    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/zonacomun_ep6phn.webp",
-    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/vistacenital_nimdbd.webp",
-  ];
 
   const openModal = (type: "3d" | "video" | "gallery") => {
     setModalContent(type);
@@ -30,10 +26,17 @@ export default function ProjectMediaRibbon() {
 
   const closeModal = () => {
     setModalOpen(false);
-    setModalContent(null);
+    setModalContent(null); 
   };
 
-  if (!mounted) return null;
+  const galleryImages = [
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp",
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/alejandria_alt_q5oakn.webp",
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/zonacomun_ep6phn.webp",
+    "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/vistacenital_nimdbd.webp",
+  ];
+
+  if (!mounted) return null; // Asegúrate de que el componente esté montado antes de renderizar
 
   return (
     <>
@@ -80,6 +83,7 @@ export default function ProjectMediaRibbon() {
         </a>
       </div>
 
+      {/* Modal */}
       <Modal
         isOpen={modalOpen}
         onRequestClose={closeModal}
@@ -135,7 +139,7 @@ export default function ProjectMediaRibbon() {
                   className="object-contain"
                   width={800}
                   height={450}
-                  style={{ maxHeight: "80vh", width: "100%" }}
+                  style={{ maxHeight: '80vh', width: '100%' }}
                 />
               </SwiperSlide>
             ))}

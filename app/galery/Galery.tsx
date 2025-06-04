@@ -75,7 +75,7 @@ export default function Galery() {
               <Image
                 src={item.image}
                 alt={item.title}
-                fill
+                layout='fill'        
                 style={{ objectFit: 'cover', display: 'block' }}
                 sizes="(max-width: 768px) 100vw, 33vw"
                 priority={index === 0}

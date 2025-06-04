@@ -87,7 +87,8 @@ export default function ProyectosCarousel() {
                   <Image
                     src={proyecto.image}
                     alt={proyecto.title}
-                    fill
+                    width={20}
+                    height={20}
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
                     priority={index === 0}
@@ -107,6 +108,8 @@ export default function ProyectosCarousel() {
                       <div className="relative w-48 h-24">
                         <Image
                           src={proyecto.logo}
+                          width={20}
+                          height={20}
                           alt={`${proyecto.title} logo`}
                           fill
                           style={{ objectFit: 'contain' }}

@@ -37,7 +37,7 @@ export default function Team() {
               <Image
                 src={empleado.image}
                 alt={empleado.name}
-                fill
+                layout='fill'
                 style={{ objectFit: 'cover' }}
                 sizes="128px"
                 priority={index === 0} // Carga prioritaria solo para la primera imagen

@@ -74,8 +74,8 @@ export default function Navbar() {
             <Image
               src="/2.png"
               alt="Logo La Mía"
-              width={56}   // Ajusta el ancho aquí (h-14 ~ 56px)
-              height={56}  // Ajusta la altura para mantener proporción o usa layout="intrinsic"
+              width={135}   // Ajusta el ancho aquí (h-14 ~ 56px)
+              height={100}  // Ajusta la altura para mantener proporción o usa layout="intrinsic"
               style={{ background: "transparent" }}
               priority={true}
             />
@@ -85,7 +85,7 @@ export default function Navbar() {
           <Image
             src="/texto.png"
             alt="Texto Logo"
-            width={112} // Ajusta ancho (ejemplo h-7 ~ 28px altura)
+            width={120} // Ajusta ancho (ejemplo h-7 ~ 28px altura)
             height={28}
             className={`transition-opacity duration-300 ${
               scrolled ? "opacity-0 pointer-events-none" : "opacity-100"
