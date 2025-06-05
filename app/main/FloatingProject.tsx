@@ -34,7 +34,7 @@ export default function FloatingProjectsButton() {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.8 }}
           transition={{ duration: 0.8 }}
-          className="fixed bottom-10 right-8 z-50 shadow-xl shadow-[#454181]/30"
+          className="fixed bottom-10 right-8 z-50"
         >
           <Link
             href="/projects"

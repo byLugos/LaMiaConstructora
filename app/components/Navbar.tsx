@@ -69,23 +69,20 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
         <div className="flex items-center space-x-2">
-          {/* Logo principal - siempre visible y flotando arriba */}
           <Link href="#" className="relative z-20">
             <Image
               src="/2.png"
               alt="Logo La Mía"
-              width={135}   // Ajusta el ancho aquí (h-14 ~ 56px)
-              height={100}  // Ajusta la altura para mantener proporción o usa layout="intrinsic"
+              width={150}   
+              height={100}  
               style={{ background: "transparent" }}
               priority={true}
             />
           </Link>
-
-          {/* Texto - desaparece al hacer scroll */}
           <Image
             src="/texto.png"
             alt="Texto Logo"
-            width={120} // Ajusta ancho (ejemplo h-7 ~ 28px altura)
+            width={120} 
             height={28}
             className={`transition-opacity duration-300 ${
               scrolled ? "opacity-0 pointer-events-none" : "opacity-100"

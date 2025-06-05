@@ -6,13 +6,6 @@ import SectionTitle from '@/app/components/ui/SectionTitle'
 import SectionSubtitle from '@/app/components/ui/SectionSubtitle'
 import Text from '@/app/components/ui/Text'
 
-import {
-  FaBed,
-  FaArrowsAltH,
-  FaBath,
-  FaCar
-} from 'react-icons/fa'
-
 type Feature = {
   title: string
   value: string
@@ -24,21 +17,20 @@ type ProjectRaw = {
   logo?: string
   status?: string
   description?: string
-  images?: string[]
-  technicalDetails?: {
-    units: {
-      features: Feature[]
-    }[]
-  }
+  images?: string[] // Aquí definimos correctamente que es un arreglo de imágenes
+  apartmentFeatures: Feature[]
+  projectFeatures: Feature[]
   url: string
-  image: string
+  color: string 
 }
 
 type Project = {
   title: string
   url: string
-  image: string
-  features: Feature[]
+  image: string | undefined  // Permitir que image sea string o undefined
+  apartmentFeatures: Feature[]
+  projectFeatures: Feature[]
+  color: string 
 }
 
 export default function Cards() {
@@ -54,16 +46,13 @@ export default function Cards() {
   useEffect(() => {
     if (!projectsRaw) return
     const mapped = Object.values(projectsRaw).map(p => {
-      const firstUnit = p.technicalDetails?.units?.[0]
-      const wantedFeatures = ['Metros construidos', 'Habitaciones', 'Baños', 'Parqueadero']
-      const features = firstUnit?.features
-        ?.filter(f => wantedFeatures.includes(f.title))
-        ?? []
       return {
         title: p.title,
         url: p.url,
-        image: p.images?.[0] ?? p.image,
-        features
+        image: p.images?.[0], // Usamos correctamente el primer elemento del arreglo de imágenes
+        apartmentFeatures: p.apartmentFeatures,
+        projectFeatures: p.projectFeatures,
+        color: p.color // Pasamos el color al estado del proyecto
       }
     })
 
@@ -72,51 +61,58 @@ export default function Cards() {
 
   if (!projects.length) return null
 
-  const iconMap: Record<string, React.ElementType> = {
-    'Habitaciones': FaBed,
-    'Metros construidos': FaArrowsAltH,
-    'Baños': FaBath,
-    'Parqueadero': FaCar
-  }
-
   return (
-    <section className="bg-white py-20 px-6">
+    <section className="bg-white py-2 px-10">
       <SectionTitle className="text-center mb-12">Nuestros Proyectos</SectionTitle>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-14">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group border rounded-lg overflow-hidden shadow-lg transform bg-[#454181]/90 hover:scale-105 duration-300 ease-in-out hover:bg-[#454181]"
+            className="group border rounded-lg overflow-hidden shadow-lg transform w-[115%]"
+            style={{ backgroundColor: project.color }} // Aplicamos el color de fondo de cada tarjeta
           >
             <a href={project.url} target="_blank" rel="noopener noreferrer" >
               <div className="relative w-full h-48">
                 <Image
-                  src={project.image}
+                  src={project.image || '/default-image.jpg'} // Imagen por defecto si no hay una válida
                   alt={project.title}
-                  layout='fill'
+                  fill
                   className="object-cover group-hover:blur-none blur-[3px] transition duration-300 ease-in-out"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority={index === 0}
+                  priority={index === 0} // prioriza la primera imagen
                 />
               </div>
               <div className="p-6">
                 <SectionSubtitle className="text-xl font-semibold mb-4 text-white">
                   {project.title}
                 </SectionSubtitle>
-                <ul>
-                  {project.features.map((feature, idx) => {
-                    const iconKey = feature.title === 'Número de Habitaciones' ? 'Habitaciones' : feature.title
-                    const IconComponent = iconMap[iconKey]
-                    return (
-                      <li key={idx} className="flex items-center space-x-2 mb-3 text-white">
-                        {IconComponent && <IconComponent className="w-6 h-6" />}
-                        <Text className='text-white'>{feature.title}:</Text>
-                        <Text className='text-white'>{feature.value}</Text>
-                      </li>
-                    )
-                  })}
-                </ul>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="text-white">
+                    <Text className="text-lg font-semibold text-white">Apartamentos</Text>
+                    <ul className="list-none space-y-2">
+                      {project.apartmentFeatures.map((feature, idx) => (
+                        <li key={idx} className="flex items-center space-x-2 mb-3">
+                          <Text className="text-white text-[14px] text-left">{feature.title}:</Text>
+                          <Text className="text-white text-[14px] text-left">{feature.value}</Text>
+                        </li>
+                      ))} 
+                    </ul>
+                  </div>
+
+                  <div className="text-white">
+                    <Text className="text-lg font-semibold text-white">Proyecto</Text>
+                    <ul className="list-none space-y-4">
+                      {project.projectFeatures.map((feature, idx) => (
+                        <li key={idx} className="flex items-center space-x-2 mb-3">
+                          <Text className="text-white text-[14px] text-left">{feature.title}:</Text>
+                          <Text className="text-white text-[14px] text-left">{feature.value}</Text>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </a>
           </div>

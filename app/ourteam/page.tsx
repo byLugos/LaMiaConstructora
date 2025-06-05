@@ -7,8 +7,8 @@ export default function Galery() {
     <>
       <Navbar />
       <HeroSmall
-      title='QUIÉNES SOMOS'
-      image='https://res.cloudinary.com/dwowtfmgn/image/upload/v1748301820/group_xwqjvw.jpg'/>
+      title=''
+      image='/equipo.jpg'/>
       <Team/>
       <Footer/>
     </>

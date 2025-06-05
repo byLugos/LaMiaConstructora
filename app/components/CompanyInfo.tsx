@@ -64,13 +64,6 @@ export default function CompanyInfo({ dataPath }: CompanyInfoProps) {
         <Text className="mb-4">{info.description}</Text>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        <Button href={info.button.link}>{info.button.text}</Button>
-      </motion.div>
     </section>
   )
 }

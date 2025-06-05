@@ -39,8 +39,7 @@ export default function WhatMakesUsDifferent() {
         {data.map((card, idx) => (
           <div
             key={idx}
-            className="flex flex-col bg-[#f8f8f8] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-xs mx-auto"
-            style={{ height: "auto" }}
+            className="flex flex-col bg-[#f8f8f8] rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 w-full"
           >
             <div className="relative w-full h-[192px]">
               <Image
@@ -48,22 +47,22 @@ export default function WhatMakesUsDifferent() {
                 alt={card.title}
                 layout="fill"
                 style={{ objectFit: "cover" }}
-                priority={idx === 0} // Prioriza la primera imagen si quieres
+                priority={idx === 0}
                 className="rounded-t-xl"
               />
             </div>
 
-            <div className="p-6 flex flex-col flex-grow justify-between">
-              <div>
+            <div className="p-6 flex flex-col h-full">
+              <div className="mb-4">
                 <SectionSubtitle className="text-xl font-semibold mb-4 text-[#454181]">
                   {card.title}
                 </SectionSubtitle>
                 <Text className="mb-4">{card.subtitle}</Text>
               </div>
 
-              <ul className="space-y-6">
+              <ul className="space-y-2 flex-grow">
                 {card.items.map((item, i) => (
-                  <li key={i} className="flex items-center text-gray-700">
+                  <li key={i} className="flex items-start text-gray-700">
                     <FaCheckCircle className="h-5 text-[#454181] mr-2 flex-shrink-0" />
                     <Text>{item}</Text>
                   </li>

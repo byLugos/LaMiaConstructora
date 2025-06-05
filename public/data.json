@@ -5,15 +5,15 @@
   },
   "companyInfo": {
     "general": {
-      "title": "La Mía Constructora",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...",
+      "title": "La Mía Constructora S.A.S",
+      "description": "Empresa líder en construcción en ingeniería, con más de 11 años de experiencia",
       "contact": {
-        "phoneOne": "311 311 3111",
+        "phoneOne": "316 372 7640 ",
         "phoneTwo": "312 312 3222",
         "phoneThree": "313 313 3333",
-        "email": "info@loremipsum.com",
+        "email": "tramites@constructoralamia.com",
         "whatsapp": "+123.456.78910",
-        "address": "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting"
+        "address": "Cll 46 N 10 B-62 Sogamoso, Boyacá"
       },
       "button": {
         "link": "/ourteam",
@@ -21,10 +21,10 @@
       }
     },
     "aboutUs": {
-      "titleOne": "Info básica acá",
-      "titleTwo": "Otra info acá",
-      "descriptionOne": "Eu eiusmod sunt non sunt cupidatat qui eiusmod elit. Est ad ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
-      "descriptionTwo": "ipsum laborum sunt cillum et aute non ex exercitation. Eu sunt fugiat Lorem labore eu amet sint et consequat esse reprehenderit. Veniam sint ut in ad qui. Ullamco veniam laboris ipsum consequat nulla enim qui magna velit aliqua cillum ad dolor. Reprehenderit aute eu do labore exercitation cillum qui adipisicing id laboris dolor cupidatat amet mollit. Dolore fugiat adipisicing magna velit aliqua id minim proident laboris et ullamco.",
+      "titleOne": "Constructora La Mía",
+      "titleTwo": "Todo esto...",
+      "descriptionOne": "Somos una empresa Colombiana enfocada en proyectos de ingeniería que van desde el diseño, estructuración, construcción, mantenimiento y administración de obras de ingeniería, abarcando sus diferentes áreas tales como, movimiento de tierras, construcción de redes de alcantarillado y acueductos, construcción de infraestructura vial, desarrollo de proyectos urbanísticos, diseño y construcción de proyectos en la industria petrolera en las áreas: civil, mecánica y ambiental.",
+      "descriptionTwo": "...manejado siempre bajo metodologías PMP y el modelo Lean Construcción, garantizando una planeación y desarrollo de los proyectos óptimos para satisfacer las necesidades de nuestros clientes. Es nuestra misión que para el año 2025 que no solo sigamos siendo una de las empresas de ingeniería más importantes del departamento, sino también proyectarnos dentro de mercados nacionales identificados como nicho de crecimiento, siempre teniendo como convicción el poder satisfacer las necesidades de nuestros clientes.",
       "button": {
         "link": "/ourteam",
         "text": "Conócenos!"
@@ -34,37 +34,27 @@
       {
         "name": "Facebook",
         "icon": "facebook",
-        "url": "https://facebook.com/la_mia"
-      },
-      {
-        "name": "Twitter",
-        "icon": "twitter",
-        "url": "https://twitter.com/la_mia"
+        "url": "https://www.facebook.com/lamiaconstructora"
       },
       {
         "name": "Instagram",
         "icon": "instagram",
-        "url": "https://instagram.com/la_mia"
-      },
-      {
-        "name": "LinkedIn",
-        "icon": "linkedin",
-        "url": "https://linkedin.com/company/la_mia"
+        "url": "https://www.instagram.com/constructoralamia/"
       },
       {
         "name": "YouTube",
         "icon": "youtube",
-        "url": "https://youtube.com/la_mia"
+        "url": "https://www.youtube.com/@CONSTRUCTORALAMIA"
       }
     ],
-    "legal": "Lorem Ipsum is simply dummy text of the printing and..."
+    "legal": "Powered by Ian Rodríguez"
   },
 
   "navigation": {
     "items": [
       { "label": "Inicio", "link": "/" },
       { "label": "Proyectos", "link": "/projects" },
-      { "label": "Galeria", "link": "/galery" },
+      { "label": "Sala de ventas", "link": "/sales" },
       { "label": "Nosotros", "link": "/ourteam" }
     ],
     "note": "NO CAMBIAR LAS RUTAS A LAS IMÁGENES SIN CONSULTA PREVIA..."
@@ -100,15 +90,14 @@
     "buttonLabel": "Link a vídeo",
     "buttonLink": "/videos"
   },
-
   "projects": {
     "alejandria": {
       "url": "/alejandria",
       "title": "Alejandría",
       "location": "Sogamoso / Norte",
       "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/alejandria_logo_zblmsi.webp",
-      "status": "En proceso",
-      "description": "Breve párrafo descriptivo del proyecto...",
+      "status": "Finalizado",
+      "description": "Apartamentos enchapados, ubicados a 7 minutos del centro",
       "images": [
         "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298103/lateralizquierdo_echeb6.webp",
         "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298099/frontaluno_bvpgai.webp",
@@ -116,65 +105,60 @@
         "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/trasera_m11wxk.webp",
         "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/vistacenital_nimdbd.webp"
       ],
-      "technicalDetails": {
-        "units": [
-          {
-            "unitTitle": "Apartamento Tipo A",
-            "planos": [
-              "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp",
-              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298101/isoalejandriados_hkeijs.webp"
-            ],
-            "features": [
-              { "title": "Metros construidos", "value": "75 m²" },
-              { "title": "Habitaciones", "value": "3" },
-              { "title": "Baños", "value": "2" },
-              { "title": "Parqueadero", "value": "1" }
-            ],
-            "description": "Apartamento espacioso con excelente iluminación natural...",
-            "icons": [
-              "Zona de ropa",
-              "Cocina",
-              "Bañera",
-              "Parqueadero",
-              "Sala",
-              "Entrada",
-              "Baños",
-              "Habitaciones"
-            ]
-          }
-        ]
-      }
+      "apartmentFeatures": [
+        { "title": "Metros construidos", "value": "52 m2" },
+        { "title": "Habitaciones", "value": "2 o 3" },
+        { "title": "Baños", "value": "1" },
+        { "title": "Parqueadero", "value": "1" },
+        { "title": "Zona de ropas", "value": "Independiente" },
+        { "title": "Cocina", "value": "Con mueble" },
+        { "title": "Sala", "value": "✔" },
+        { "title": "Comedor", "value": "✔" }
+      ],
+      "projectFeatures": [
+        { "title": "Conjunto cerrado", "value": "✔" },
+        { "title": "Parqueaderos comunales", "value": "✔" },
+        { "title": "Portería", "value": "✔" },
+        { "title": "2 parques", "value": "✔" },
+        { "title": "Bicicletero", "value": "✔" }
+      ],
+      "color":"#454181"
     },
     "colina": {
       "url": "/colina",
       "title": "La Colina",
-      "location": "Tunja / Sur",
+      "location": "Sogamoso / Norte",
       "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298095/colina_logo_qyabwb.webp",
       "status": "Finalizado",
-      "description": "Descripción para el proyecto La Colina...",
+      "description": "Apartamentos terminados, todo lo que buscas está aquí",
       "images": [
         "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298094/balcon_tmijeo.webp",
         "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298100/fuente_tres_sen8da.webp",
         "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298099/fuente_dos_jiv8dd.webp"
       ],
-      "technicalDetails": {
-        "units": [
-          {
-            "unitTitle": "Apartamento Tipo A",
-            "planos": [
-              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolina_y1d3ul.webp",
-              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolinados_xhbb4b.webp"
-            ],
-            "features": [
-              { "title": "Metros construidos", "value": "70 m²" },
-              { "title": "Habitaciones", "value": "3" },
-              { "title": "Baños", "value": "2" }
-            ],
-            "description": "Apartamento moderno en La Colina...",
-            "icons": ["Zona de ropa", "Cocina", "Bañera"]
-          }
-        ]
-      }
+      "apartmentFeatures": [
+        { "title": "Metros construidos", "value": "65.5 m2" },
+        { "title": "Habitaciones", "value": "3" },
+        { "title": "Baños", "value": "2" },
+        { "title": "Parqueadero", "value": "1" },
+        { "title": "Zona de ropas", "value": "Independiente" },
+        { "title": "Cocina", "value": "Con 2 muebles" },
+        { "title": "Sala", "value": "✔" },
+        { "title": "Comedor", "value": "✔" },
+        { "title": "Dos balcones", "value": "✔" }
+      ],
+      "projectFeatures": [
+        { "title": "Conjunto cerrado", "value": "✔" },
+        { "title": "3 porterías", "value": "✔" },
+        { "title": "Amplias zonas verdes", "value": "✔" },
+        { "title": "Senderos peatonales", "value": "✔" },
+        { "title": "Fuente", "value": "✔" },
+        { "title": "Media cancha", "value": "✔" },
+        { "title": "Parque infantil", "value": "✔" },
+        { "title": "Espacio para gimnasio", "value": "✔" },
+        { "title": "Salón social", "value": "✔" }
+      ],
+      "color":"#b0d17f"
     }
   },
 
@@ -279,34 +263,44 @@
 
   "team": [
     {
-      "name": "Juan Pérez",
-      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
-      "description": "Juan es el gerente de operaciones, apasionado por la tecnología y la gestión de equipos."
+      "name": "1",
+      "image": "/ingenieria.jpg",
+      "description": "Departamento Ingeniería"
     },
     {
-      "name": "Ana García",
-      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
-      "description": "Ana es la encargada de marketing, con un gran enfoque en redes sociales y estrategia digital."
+      "name": "2",
+      "image": "/comercial.jpg",
+      "description": "Departamento Comercial"
     },
     {
-      "name": "Carlos López",
-      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
-      "description": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
+      "name": "3",
+      "image": "/tramites.jpg",
+      "description": "Departamento de Trármites"
     },
     {
-      "name": "Ian Rodriguez",
-      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
-      "description": "Mateo es el director de programación, polivalente."
+      "name": "4",
+      "image": "/posventas.webp",
+      "description": "Posventas"
     },
     {
-      "name": "Alma Marcela Gozo",
-      "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/avanceObra_vs7sip.webp",
-      "description": "Carlos es el director de proyectos, con más de 10 años de experiencia en el sector inmobiliario."
+      "name": "5",
+      "image": "/contable.jpg",
+      "description": "Departamento Contable"
+    },
+    {
+      "name": "6",
+      "image": "/compras.jpg",
+      "description": "Departamento de Compras y Proveedores"
+    },
+    {
+      "name": "7",
+      "image": "/legal.jpg",
+      "description": "Departamento Legal"
     }
   ],
 
   "promotions": {
-    "title": "CONOCE NUESTRAS PROMOCIONES",
+    "title": "CONOCE NUESTRAS NOVEDADES",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
     "button": { "text": "Conoce más", "link": "/promotions" }
   },
@@ -318,9 +312,9 @@
     "button": { "text": "Conoce más", "link": "#quienes" }
   },
   "promotionsNow": {
-    "title": "Título de la promoción",
-    "description": "Descripción breve para el modal.",
-    "imageUrl": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298107/prueba_ecile9.jpg"
+    "title": "Te llamamos!",
+    "description": "Envíanos un mensaje y nosotros te llamamos!",
+    "imageUrl": "/contactCenter.jpg"
   },
   "makeUsDifferent": [
     {
@@ -328,15 +322,15 @@
       "title": "Asesoría",
       "subtitle": "Estamos contigo antes, durante y después de la compra.",
       "items": [
-        "Materiales certificados",
-        "Normas internacionales",
-        "Personal capacitado"
+        "Asesoramiento en trámites de subsidio de caja de compensación familiar.",
+        "Asesoramiento en crédito hipotecario.",
+        "Acompañamiento en tramites de escrituración."
       ]
     },
     {
       "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298099/fuente_dos_jiv8dd.webp",
       "title": "Calidad",
-      "subtitle": "Espacios pensados para tu comodidad y estilo de vida.",
+      "subtitle": "Usamos los mejores materiales en nuestros para que tu inversión sea segura.",
       "items": [
         "Planos optimizados",
         "Iluminación natural",
@@ -346,7 +340,7 @@
     {
       "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298098/fondoHero_dos_srn63q.webp",
       "title": "Acabados",
-      "subtitle": "Materiales y procesos garantizados para tu tranquilidad.",
+      "subtitle": "Tener vivienda digna con constructora La Mia, si es posible, recibe tu hogar enchapado.",
       "items": [
         "Transporte público cercano",
         "Centros comerciales",
@@ -356,7 +350,7 @@
     {
       "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298098/externa_dos_cge6uw.webp",
       "title": "Cumplimiento",
-      "subtitle": "Haciendo de todo lo que necesitas.",
+      "subtitle": "Entregamos en los tiempos acordados, porque la confianza se respalda con hechos.",
       "items": [
         "Asesoría personalizada",
         "Postventa garantizada",

@@ -25,7 +25,7 @@ export default function Team() {
 
   return (
     <section className="bg-white py-20 px-6">
-      <SectionTitle className="text-center mb-12">Nuestro Equipo</SectionTitle>
+      <SectionTitle className="text-center mb-12">Nuestros departamentos</SectionTitle>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {empleados.map((empleado, index) => (
@@ -40,11 +40,11 @@ export default function Team() {
                 layout='fill'
                 style={{ objectFit: 'cover' }}
                 sizes="128px"
-                priority={index === 0} // Carga prioritaria solo para la primera imagen
+                priority={index === 0}
               />
             </div>
             <SectionSubtitle className="text-center text-[#454181]">{empleado.name}</SectionSubtitle>
-            <Text className="text-center text-sm text-[#454181]">{empleado.description}</Text>
+            <Text className="text-center text-[24px] text-[#454181]">{empleado.description}</Text>
           </div>
         ))}
       </div>

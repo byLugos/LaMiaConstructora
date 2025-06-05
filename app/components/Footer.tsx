@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -13,8 +13,6 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-// import Button from "@/app/components/ui/Button";
-// import Subtitle from "./ui/SectionSubtitle";
 
 type SocialItem = {
   name: string;
@@ -23,7 +21,7 @@ type SocialItem = {
 };
 
 type ContactInfo = {
-  phone: string;
+  phoneOne: string;
   email: string;
   whatsapp?: string;
   address: string;
@@ -60,10 +58,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-white text-[#131A24]">
-      {/* Aquí puedes activar el newsletter si lo deseas */}
-      {/* ... */}
-
-      {/* Bottom info section */}
       <motion.div
         className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8"
         initial={{ opacity: 0, y: 30 }}
@@ -75,22 +69,29 @@ export default function Footer() {
             <Image
               src="https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298103/logo_jhwpmg.png"
               alt="Logo La Mía"
-              width={160} // Ajusta el tamaño según necesidad (h-20 ~ 80px alto)
+              width={160}
               height={80}
               className="mb-4"
-              priority={true} // para cargarla rápido en la página
+              priority={true}
             />
           </a>
         </div>
         <div>
-          <h4 className="font-bold mb-4">{data.general.name}</h4>
-          <p className="text-sm">{data.general.description}</p>
+          <h4 className="font-bold mb-4">Encuéntranos!</h4>
+          <a
+            href="https://www.google.com/maps?q=Cll+46+N+10+B-62+Sogamoso"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm text-blue-500 underline"
+          >
+            <FaMapMarkerAlt className="text-2xl" />{data.general.contact.address}            
+          </a>
         </div>
         <div>
           <h4 className="font-bold mb-4">Contacto</h4>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhone /> {data.general.contact.phone}
+              <FaPhone /> {data.general.contact.phoneOne}
             </li>
             <li className="flex items-center gap-2">
               <FaEnvelope /> {data.general.contact.email}
