@@ -1,16 +1,18 @@
 export default function Title({
-    children,
-    color = 'text-[#131A24]',
-    className = ''
-  }: {
-    children: React.ReactNode
-    color?: string
-    className?: string
-  }) {
-    return (
-      <h1 className={`text-4xl md:text-6xl font-extrabold ${color} ${className}`}>
-        {children}
-      </h1>
-    )
-  }
-  
+  children,
+  color = '#454181',  // Color por defecto
+  className = ''
+}: {
+  children: React.ReactNode;
+  color?: string;
+  className?: string;
+}) {
+  return (
+    <h1
+      className={`text-4xl md:text-6xl font-extrabold ${className}`}
+      style={{ color }}  // Aplicar color dinámicamente
+    >
+      {children}
+    </h1>
+  );
+}

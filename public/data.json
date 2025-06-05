@@ -70,18 +70,24 @@
       "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298094/alejandria_alt_q5oakn.webp",
       "link": "/alejandria",
       "buttonLabel": "Ver Más",
-      "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6"
+      "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6",
+      "buttonColor": "#454181",
+      "fontColor": "#454181",
+      "description": "Una descripción del proyecto para mostrar más detalles."
     },
     {
       "key": "colina",
       "title": "La Colina 1",
       "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298095/colina_logo_qyabwb.webp",
-      "logoWidth": "150",
-      "logoHeight": "50",
+      "logoWidth": "140",
+      "logoHeight": "20",
       "image": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298096/colina_altdos_ir0w7a.webp",
       "link": "/colina",
       "buttonLabel": "Conocer Proyecto",
-      "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6"
+      "link_video": "https://www.youtube.com/watch?v=2UXpZPqjOIM&list=RDssVCtZBQyus&index=6",
+      "buttonColor": "#b0d17f",
+      "fontColor": "#b0d17f",
+      "description": "Una descripción del proyecto para mostrar más detalles."
     }
   ],
   "simpleBox": {
@@ -122,7 +128,7 @@
         { "title": "2 parques", "value": "✔" },
         { "title": "Bicicletero", "value": "✔" }
       ],
-      "color":"#454181"
+      "color": "#a4a0da"
     },
     "colina": {
       "url": "/colina",
@@ -158,7 +164,7 @@
         { "title": "Espacio para gimnasio", "value": "✔" },
         { "title": "Salón social", "value": "✔" }
       ],
-      "color":"#b0d17f"
+      "color": "#b0d17f"
     }
   },
 

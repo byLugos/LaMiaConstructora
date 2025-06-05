@@ -1,81 +1,82 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import SectionTitle from '@/app/components/ui/SectionTitle'
-import SectionSubtitle from '@/app/components/ui/SectionSubtitle'
-import Text from '@/app/components/ui/Text'
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import SectionTitle from "@/app/components/ui/SectionTitle";
+import SectionSubtitle from "@/app/components/ui/SectionSubtitle";
+import Text from "@/app/components/ui/Text";
 
 type Feature = {
-  title: string
-  value: string
-}
+  title: string;
+  value: string;
+};
 
 type ProjectRaw = {
-  title: string
-  location?: string
-  logo?: string
-  status?: string
-  description?: string
-  images?: string[] // Aquí definimos correctamente que es un arreglo de imágenes
-  apartmentFeatures: Feature[]
-  projectFeatures: Feature[]
-  url: string
-  color: string 
-}
+  title: string;
+  location?: string;
+  logo?: string;
+  status?: string;
+  description?: string;
+  images?: string[]; // Aquí definimos correctamente que es un arreglo de imágenes
+  apartmentFeatures: Feature[];
+  projectFeatures: Feature[];
+  url: string;
+  color: string;
+};
 
 type Project = {
-  title: string
-  url: string
-  image: string | undefined  // Permitir que image sea string o undefined
-  apartmentFeatures: Feature[]
-  projectFeatures: Feature[]
-  color: string 
-}
+  title: string;
+  url: string;
+  image: string | undefined; // Permitir que image sea string o undefined
+  apartmentFeatures: Feature[];
+  projectFeatures: Feature[];
+  color: string;
+};
 
 export default function Cards() {
-  const [projectsRaw, setProjectsRaw] = useState<Record<string, ProjectRaw> | null>(null)
-  const [projects, setProjects] = useState<Project[]>([])
+  const [projectsRaw, setProjectsRaw] = useState<Record<string, ProjectRaw> | null>(null);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    fetch('/data.json')
-      .then(res => res.json())
-      .then(data => setProjectsRaw(data.projects))
-  }, [])
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => setProjectsRaw(data.projects));
+  }, []);
 
   useEffect(() => {
-    if (!projectsRaw) return
-    const mapped = Object.values(projectsRaw).map(p => {
+    if (!projectsRaw) return;
+    const mapped = Object.values(projectsRaw).map((p) => {
       return {
         title: p.title,
         url: p.url,
         image: p.images?.[0], // Usamos correctamente el primer elemento del arreglo de imágenes
         apartmentFeatures: p.apartmentFeatures,
         projectFeatures: p.projectFeatures,
-        color: p.color // Pasamos el color al estado del proyecto
-      }
-    })
+        color: p.color, // Pasamos el color al estado del proyecto
+      };
+    });
 
-    setProjects(mapped)
-  }, [projectsRaw])
+    setProjects(mapped);
+  }, [projectsRaw]);
 
-  if (!projects.length) return null
+  if (!projects.length) return null;
 
   return (
-    <section className="bg-white py-2 px-10">
+    <section className="bg-white py-2 px-4">
       <SectionTitle className="text-center mb-12">Nuestros Proyectos</SectionTitle>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-14">
+      {/* Usamos flex y flex-wrap para que las cards se ajusten bien en móviles */}
+      <div className="flex flex-wrap justify-center gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group border rounded-lg overflow-hidden shadow-lg transform w-[115%]"
-            style={{ backgroundColor: project.color }} // Aplicamos el color de fondo de cada tarjeta
+            className="group w-full sm:w-[48%] md:w-[48%] lg:w-[35%] xl:w-[40%] 2xl:w-[30%] border rounded-lg overflow-hidden shadow-lg transform"
+            style={{ backgroundColor: project.color }}
           >
-            <a href={project.url} target="_blank" rel="noopener noreferrer" >
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
               <div className="relative w-full h-48">
                 <Image
-                  src={project.image || '/default-image.jpg'} // Imagen por defecto si no hay una válida
+                  src={project.image || "/default-image.jpg"} // Imagen por defecto si no hay una válida
                   alt={project.title}
                   fill
                   className="object-cover group-hover:blur-none blur-[3px] transition duration-300 ease-in-out"
@@ -97,7 +98,7 @@ export default function Cards() {
                           <Text className="text-white text-[14px] text-left">{feature.title}:</Text>
                           <Text className="text-white text-[14px] text-left">{feature.value}</Text>
                         </li>
-                      ))} 
+                      ))}
                     </ul>
                   </div>
 
@@ -119,5 +120,6 @@ export default function Cards() {
         ))}
       </div>
     </section>
-  )
+  );
 }
+
