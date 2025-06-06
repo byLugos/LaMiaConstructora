@@ -64,7 +64,7 @@ export default function ProjectMediaRibbon() {
         </div>
 
         <a
-          href="https://maps.google.com/?q=4.710989,-74.072090"
+          href="https://www.google.com/maps/place/Cl.+46+%23+10B-62,+Sogamoso,+Boyac%C3%A1/@5.7417403,-72.9127939,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6a4622b1fd8613:0x1afb684e2872d5f7!8m2!3d5.741735!4d-72.910219!16s%2Fg%2F11x2m39tcd?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           className="relative min-w-[280px] h-40 rounded-lg cursor-pointer flex items-center justify-center bg-cover bg-center filter brightness-75 hover:brightness-100 transition hover:scale-105"
@@ -92,7 +92,7 @@ export default function ProjectMediaRibbon() {
         {modalContent === '3d' && (
           <div className="aspect-video w-full">
             <iframe
-              src="https://my.matterport.com/show/?m=9BDSyscMXG7"
+              src="https://www.3dvista.com/samples/new_york_loft.html"
               title="Recorrido 3D"
               className="w-full h-full rounded-lg"
               allowFullScreen
@@ -104,7 +104,7 @@ export default function ProjectMediaRibbon() {
         {modalContent === 'video' && (
           <div className="aspect-video w-full">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/watch?v=ruvctDODiVo"
               title="Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

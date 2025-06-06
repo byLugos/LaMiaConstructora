@@ -102,8 +102,8 @@
       "title": "Alejandría",
       "location": "Sogamoso / Norte",
       "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298093/alejandria_logo_zblmsi.webp",
-      "status": "Finalizado",
-      "description": "Apartamentos enchapados, ubicados a 7 minutos del centro",
+      "status": "En construcción",
+      "description": "¡Así es Alejandría! Descubre todo sobre nuestro conjunto y conoce el apartamento que puede ser tuyo. Visita nuestra sala de ventas en la calle 46 N° 10B-62, Sogamoso.El proyecto estará ubicado en la Transversal 26 N° 31-48, Barrio Prado Norte.",
       "images": [
         "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298103/lateralizquierdo_echeb6.webp",
         "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298099/frontaluno_bvpgai.webp",
@@ -128,7 +128,35 @@
         { "title": "2 parques", "value": "✔" },
         { "title": "Bicicletero", "value": "✔" }
       ],
-      "color": "#a4a0da"
+      "color": "#a4a0da",
+      "technicalDetails": {
+        "units": [
+          {
+            "unitTitle": "Apartamento Tipo A",
+            "planos": [
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/q_auto,f_auto/v1748298101/isoalejandria_jwztms.webp",
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298101/isoalejandriados_hkeijs.webp"
+            ],
+            "features": [
+              { "title": "Metros construidos", "value": "52 m²" },
+              { "title": "Habitaciones", "value": "3" },
+              { "title": "Baños", "value": "2" },
+              { "title": "Parqueadero", "value": "1" }
+            ],
+            "description": "Bienvenido a Alejandría, un conjunto residencial en pleno corazón de Sogamoso, donde la comodidad y el diseño se unen para ofrecerte el hogar ideal. Con apartamentos de 52 m², Alejandría ofrece opciones de 2 o 3 habitaciones, un baño, y un parqueadero, con una cocina equipada y una zona de ropas independiente. Además, el proyecto contará con amplias áreas comunes como parqueaderos comunales, dos parques, portería, y un bicicletero. Actualmente en construcción, Alejandría es el lugar perfecto para vivir cerca de todo. Visítanos en nuestra sala de ventas en la calle 46 N° 10B-62 y conoce más sobre este maravilloso proyecto.",
+            "icons": [
+              "Zona de ropa",
+              "Cocina",
+              "Bañera",
+              "Parqueadero",
+              "Sala",
+              "Entrada",
+              "Baños",
+              "Habitaciones"
+            ]
+          }
+        ]
+      }
     },
     "colina": {
       "url": "/colina",
@@ -136,7 +164,7 @@
       "location": "Sogamoso / Norte",
       "logo": "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298095/colina_logo_qyabwb.webp",
       "status": "Finalizado",
-      "description": "Apartamentos terminados, todo lo que buscas está aquí",
+      "description": "Tener vivienda propia con constructora la mia SI ES POSIBLE. Conjunto residencial la colina ya cuenta con 180  clientes que han cumplido esta gran meta. Contáctanos y haz parte de este proyecto",
       "images": [
         "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298094/balcon_tmijeo.webp",
         "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298100/fuente_tres_sen8da.webp",
@@ -164,7 +192,25 @@
         { "title": "Espacio para gimnasio", "value": "✔" },
         { "title": "Salón social", "value": "✔" }
       ],
-      "color": "#b0d17f"
+      "color": "#b0d17f",
+      "technicalDetails": {
+        "units": [
+          {
+            "unitTitle": "Apartamento Tipo A",
+            "planos": [
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolina_y1d3ul.webp",
+              "https://res.cloudinary.com/dwowtfmgn/image/upload/v1748298102/isocolinados_xhbb4b.webp"
+            ],
+            "features": [
+              { "title": "Metros construidos", "value": "65.5 m²" },
+              { "title": "Habitaciones", "value": "3" },
+              { "title": "Baños", "value": "2" }
+            ],
+            "description": "Descubre el confort y la comodidad que te ofrece el Conjunto Residencial La Colina, un proyecto de vivienda diseñado para que disfrutes de cada espacio en tu nuevo hogar. Con apartamentos de 65.5 m² y opciones de 3 habitaciones y 2 baños, este conjunto cerrado se destaca por su amplia zona de ropas independiente, dos balcones para disfrutar del aire libre y una cocina equipada con dos muebles. Además, podrás aprovechar las diversas áreas comunes como zonas verdes, senderos peatonales, parque infantil, y más. Con 180 clientes satisfechos, La Colina es el lugar perfecto para iniciar tu nueva etapa. ¡Contáctanos y sé parte de este exclusivo proyecto!",
+            "icons": ["Zona de ropa", "Cocina", "Bañera"]
+          }
+        ]
+      }
     }
   },
 
